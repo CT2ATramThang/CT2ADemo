@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Hiệu sách OTO</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
+        <link rel="stylesheet" href="styles/dangnhap.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="bxSlider/jquery.bxslider.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:400">
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,900">
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <script src="bxSlider/jquery.bxslider.min.js"></script>
+        <script src="js/image_swap.js"></script>
+        <script src="bootstrap/bootstrap.min.js"></script>
+        <script src="bootstrap/popper.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.15.0/jquery.validate.min.js"></script>
+        <script src="js/validate.js"></script>
+        <style>
+            .menu1{
+                margin: 0;
+                padding: 0;
+                font-family: sans-serif;
+            }
+            nav{
+                width: 100%;
+                background:  #00316D;
+            }
+            ul{
+                width: 80%;
+                margin: 0 auto;
+                padding: 0;
+            }
+            ul li{
+                list-style: none;
+                display: inline-block;
+                padding-right: 30px;
+            }
+            ul li:hover{
+                background: #e91e63;
+            }
+            ul li a{
+                color: #fff;
+                text-decoration: none;
+            }
+            .toggle{
+                width: 100%;
+                padding: 10px 20px;
+                text-align: right;
+                background: #001f44;
+                box-sizing: border-box;
+                display: none;
+                color: #fff
+            }
+            @media (max-width: 768px)
+            {
+                .toggle{
+                    display: block;
+                }
+
+                ul{
+                    width: 100%;
+                    display:none;
+                }
+                ul li{
+                    display: block;
+                    text-align: center;
+                     
+                }
+                .dropdown-item{
+                    display: block;    
+                    }   
+                .active{
+                    display: block;
+                }
+                .mn{
+                    display: none !important;
+                }
+                
+    
+                
+            }
+            a.al{
+                text-decoration: none;
+                color: white;
+            }
+            .dropdown:hover .m1{
+                display: block;
+            }
+            .m1 {
+                display: none;
+                position: absolute;
+                background-color: #f9f9f9;
+                min-width: 245px;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                z-index: 1;
+            }
+            .dropdown-item:hover{
+                background-color: #f1f1f1;
+            }
+            a{
+              text-decoration: none !important;  
+            }
+        </style>
+    </head>
+    <body>
+
+        <div class="container-fluid" style="background-color: #EBEBEB;"  > 
+            <div class="row register" style="background-color: #0B667D; ">
+
+                <div class="col-md-2 col-sm-2" style="color: white; font-size:200%; padding-top: 1em;">
+                    <h1><a href="index.html">OTO.com</a></h1>
+                </div>
+                <div class="col-md-10">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <div class=" row justify-content-md-center">
+                                <div class="col-md-auto" style="color: white;"><h3>Xin chào! OTO có thể giúp gì cho bạn?</h3></div>
+                            </div>
+                            <div>
+                                <form action="/action_page.php">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="name" placeholder="tiềm kiếm và thêm vào giỏ hàng" name="tiêu đề">
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="col-md-4" >
+
+                            <div class="qqq">
+                                <a class="navbar-brand" href="giohang1.html">
+                                    <i class="fa fa-shopping-cart" style="color: white; font-size: 36px;"></i>
+                                </a>
+                                <span class="ee">Giỏ hàng </span>
+
+
+                            </div>
+                            <div class="oto-header-banner dndk" id="topActionLiveUpBanner">
+                                <table class="table" style="font-size: 80%; color: white;">
+                                    <thead>
+                                        <tr>
+                                            <th><a href="dangnhap.html" class="text-dark">Đăng nhập</a></th>
+                                            <th><a href="dangky.html" class="text-dark">Đăng ký</a></th>
+                                        </tr>
+                                    </thead>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row menu1">
+            <nav>
+                <div class="toggle">
+                    <i class="fas fa-align-justify"></i>
+                </div>
+                <ul>
+                    <li class="dropdown"><i class="material-icons" style="color: white;">view_headline</i>&nbsp;<a href="#" class="text-white">Danh mục sản phẩm</a>
+                        <ul class="m1">
+                            <li><a class="dropdown-item" href="vanhoc.html">Văn học</a></li>
+                            <li><a class="dropdown-item" href="#">Thiếu nhi</a></li>
+                            <li><a class="dropdown-item" href="#">Kinh doanh</a></li>
+                            <li><a class="dropdown-item" href="#">Tác phẩm kinh điển</a></li>
+                            <li><a class="dropdown-item" href="#">Khoa học - Công nghệ</a></li>
+                            <li><a class="dropdown-item" href="#">Chăm sóc gia đình</a></li>
+                            <li><a class="dropdown-item" href="#">Truyện tranh</a></li>
+                            <li><a class="dropdown-item" href="#">Tác phẩm chọn lọc</a></li>
+                        </ul>
+                    </li>
+                    <li><i class="material-icons" style="color: white;">pan_tool</i>&nbsp;<a href="sachotobanchay.html" class="text-white">Sách oto bán chạy</a></li>
+                    <li><i class="material-icons" style="color: red;">whatshot</i>&nbsp;<a href="giamgia.html" class="text-white">deal hot trong ngày</a></li>
+                    <li><i class="material-icons" style="color: white;">assignment</i>&nbsp;<a href="#" class="text-white">kiểm tra đơn hàng</a></li>
+                    <li><i class="material-icons" style="color: white;">local_shipping</i>&nbsp;<a href="#" class="text-white">super ship?</a></li>
+                </ul>
+
+            </nav>
+            <script type="text/javascript">
+                $(document).ready(function () {
+                    $('.menu1').click(function () {
+                        $('ul').toggleClass('active');
+                    })
+                })
+            </script>
+        </div>
+        <div class="container-fluid" style="background-color: #eff0f5;">
+            <div class="row">
+                <div class="col-md-3 col-sm-4 mn">
+
+                </div>
+                <div class="col-md-6 col-sm-4" style="padding-block-start: 70px; padding-block-end: 80px;">
+                    <h4>Chào mừng đến OTO. Đăng nhập ngay!</h4>
+                    <form method="POST" role="form" id="form-login">
+                        <div class="row" style="border: 1px solid black; background-color: #fff">
+                            <div class="col-sm-6" style="padding: 3em;">
+                                <div class="form-group">
+                                    <label for="email">Email:</label>
+                                    <input type="email" class="form-control mb-2 mr-sm-2" style="width: 100%;" id="email" placeholder="Email" name="email">
+                                    <p style="color:red;display:none;" class="error errorEmail"></p>
+                                </div>
+                                <div class="form-group">
+                                    <label for="password">Mật khẩu:</label>
+                                    <input type="password" class="form-control mb-2 mr-sm-2" style="width: 100%;" id="password" placeholder="Password" name="password">
+                                    <p style="color:red;display:none;" class="error errorPassword"></p>
+                                </div>
+                                <div class="form-group form-check mb-2 mr-sm-2">
+                                    <label class="form-check-label" style="font-size: 80%">
+                                        <input class="form-check-input" type="checkbox"> Ghi nhớ mật khẩu
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-sm-6" style="padding: 3em; padding-block-start: 80px;">
+                                <button type="submit" class="btn btn-warning mb-2" style="width: 100%;">Đăng nhập</button>
+                                <h6>Hoặc, đăng nhập bằng</h6>
+                                <button type="submit" class="btn btn-danger mb-2" style="width: 100%;"><i class="fab fa-google-plus-g"></i><a href="https://google.com" class="al">Google</a></button>
+                                <button type="submit" class="btn btn-primary mb-2" style="width: 100%;"><i class="fab fa-facebook-f"></i><a href="https://facebook.com" class="al">Facebook</a></button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-3 col-sm-4 mn">
+
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid bg-warning">
+            <div class="row" style="background-color: #0B667D; ">
+                <div class="col-md-3">
+                    <div class="nnn"><h4>LIÊN HỆ VỚI OTO</h4></div>
+                    <a href="#" style="color: black;"><h6>Thứ 2 đến CN: 9h - 18h (Hotline), 7h - 22h (chat trực tuyến)</h6></a>
+                    <a href="#" style="color: black;"><h6>Trung tâm hỗ trợ</h6></a>
+                    <a href="#" style="color: black;"><h6>Hướng dẫn đặt hàng</h6></a>
+                    <a href="#" style="color: black;"><h6>Giao hàng và nhận hàng</h6></a>
+                    <a href="#" style="color: black;"><h6>Hướng dẫn đổi trả hàng</h6></a>
+                </div>
+                <div class="col-md-3">
+                    <div class="nnn"><h4>OTO VIỆT NAM</h4></div>
+                    <div><a href="#" style="color: black;">Về Oto Việt Nam</a></div>
+                    <div><a href="#" style="color: black;">Bán hàng cùng Oto</a></div>
+                    <div><a href="#" style="color: black;">Tuyển dụng</a></div>
+                    <div><a href="#" style="color: black;">Điều khoản mua bán hàng hóa</a></div>
+                    <div><a href="#" style="color: black;">Chính sách bảo mật</a></div>
+                </div>
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="nnn"><h4>ĐĂNG KÝ NHẬN BẢN TIN TỪ OTO</h4></div>
+                    </div>
+                    <div class="row">
+                        <nav class="navbar justify-content-between" style="background-color: #0b667b;">
+
+                            <form class="form-inline">
+                                <input class="form-control mr-sm-2" type="search" placeholder="Your Email Address" aria-label="Search">
+                                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Đăng kí</button>
+                            </form>
+                        </nav>'
+                    </div>
+                    <div>
+                        CÔNG TY TNHH RECESS
+                        Giấy CNĐKDN: 0308808576 – Ngày cấp: 06/5/2009, được sửa đổi lần thứ 15 ngày 24/7/2017.
+                        Cơ quan cấp: Phòng Đăng ký kinh doanh – Sở kế hoạch và Đầu tư TP.HCM
+                        Địa chỉ đăng ký kinh doanh: Tầng 19, Tòa nhà Saigon Centre – Tháp 2, 67 Lê Lợi, Phường Bến Nghé, Quận 1, Tp. Hồ Chí Minh, Việt Nam.
+                    </div>
+                </div>
+            </div>
+            <div class="row bg-white">
+
+
+                <div class="col-md-4 pb-3">
+                    CÔNG THỨC THANH TOáN
+                </div>
+                <div class="col-md-4">DỊCH VỤ GIAO HÀNG
+                </div>
+                <div class="col-md-4">CHỨNG NHẬN
+                </div>
+            </div>
+            <div class="row bg-white">
+                <div class="col-md-4">
+                    <img src="image/footer/visa.PNG">
+                    <img src="image/footer/visa2.PNG">
+                    <img src="image/footer/visa3.PNG">
+                    <img src="image/footer/visa4.PNG">
+                </div>
+                <div class="col-md-4">
+                    <div>
+                        <img src="image/footer/lelexpress.PNG">
+                        <img src="image/footer/lelexpress2.PNG">
+                    </div>
+                    <div><img src="image/footer/lelexpress3.PNG"></div>
+
+                </div>
+                <div class="col-md-4">
+                    <img src="image/footer/huyhieu.PNG">
+
+
+                </div>
+            </div>
+            <div class="row bg-light" style="padding-top: 10px;">
+
+
+                <div class="col-md-8 bg-light">
+                    <div>Liên hệ: 0989 467 439( Trâm)</div>
+                    <div>Địa chỉ: Phòng tin,32 Phan Đăng Lưu</div>
+                </div>
+                <div class="col-md-4" style="padding-left: 9em">
+                    <img src="image/footer/lienhe.PNG">
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

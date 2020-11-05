@@ -1,0 +1,34 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Mar 19, 2019, 4:17:25 PM
+    Author     : laptopre.vn
+*/
+
+button{
+    background-color: pink;
+    padding: 0 5em 0 5em;
+    
+    font-size: 150%;
+}
+.donhang{
+    border: 1px solid gray;
+    margin-top: 5em;
+}
+.donhang1{
+    padding-right: 8em;
+}
+.font{
+    font-size: 150%;
+}
+.font1{
+    color: #0B667D;
+    font-size: 170%;
+}
+
+maso{
+    font-size: 70%;
+}

@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Hiệu sách OTO</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
+        <link rel="stylesheet" href="styles/vanhoc.css">
+        <link rel="stylesheet" href="styles/sachotobanchay.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="bxSlider/jquery.bxslider.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:400">
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,900">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" id="bootstrap-css">
+        <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <script src="bootstrap/bootstrap.min.js"></script>
+        <script src="bootstrap/popper.min.js"></script>
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <script src="bxSlider/jquery.bxslider.min.js"></script>
+        <script src="js/image_swap.js"></script>
+        <script src="bootstrap/bootstrap.min.js"></script>
+        <script src="bootstrap/popper.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.15.0/jquery.validate.min.js"></script>
+        <script src="js/validate.js"></script>
+        <style>
+            .menu1{
+                margin: 0;
+                padding: 0;
+                font-family: sans-serif;
+            }
+            nav{
+                width: 100%;
+                background:  #00316D;
+            }
+            ul{
+                width: 80%;
+                margin: 0 auto;
+                padding: 0;
+            }
+            ul li{
+                list-style: none;
+                display: inline-block;
+                padding-right: 30px;
+            }
+            ul li:hover{
+                background: #e91e63;
+            }
+            ul li a{
+                color: #fff;
+                text-decoration: none;
+            }
+            .toggle{
+                width: 100%;
+                padding: 10px 20px;
+                text-align: right;
+                background: #001f44;
+                box-sizing: border-box;
+                display: none;
+                color: #fff
+            }
+            @media (max-width: 768px)
+            {
+                .toggle{
+                    display: block;
+                }
+
+                ul{
+                    width: 100%;
+                    display:none;
+                }
+                ul li{
+                    display: block;
+                    text-align: center;
+                }
+                .active{
+                    display: block;
+                }
+                .mn{
+                    display: none !important;
+                }
+            }
+            a.al{
+                text-decoration: none;
+                color: white;
+            }
+            .dropdown:hover .m1{
+                display: block;
+            }
+            .m1 {
+                display: none;
+                position: absolute;
+                background-color: #f9f9f9;
+                min-width: 245px;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                z-index: 1;
+            }
+            .dropdown-item:hover{
+                background-color: #f1f1f1;
+            }
+            a{
+                text-decoration: none !important;  
+            }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function () {
+
+                $('#itemslider').carousel({interval: 3000});
+
+                $('.carousel-showmanymoveone .item').each(function () {
+                    var itemToClone = $(this);
+
+                    for (var i = 1; i < 5; i++) {
+                        itemToClone = itemToClone.next();
+
+                        if (!itemToClone.length) {
+                            itemToClone = $(this).siblings(':first');
+                        }
+
+                        itemToClone.children(':first-child').clone()
+                                .addClass("cloneditem-" + (i))
+                                .appendTo($(this));
+                    }
+                });
+            });
+
+        </script>
+    </head>
+    <body style="background-image: url(image/3.jpg);">
+        <div class="container-fluid" style="background-color: #EBEBEB;" > 
+            <div class="row register" style="background-color: #0B667D; ">
+
+                <div class="col-md-2 col-sm-2" style="color: white; font-size:200%; padding-top: 1em;">
+                    <h1><a href="index.html">OTO.com</a></h1>
+                </div>
+                <div class="col-md-10">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <div class=" row justify-content-md-center">
+                                <div class="col-md-auto" style="color: white;"><h3>Xin chào! OTO có thể giúp gì cho bạn?</h3></div>
+                            </div>
+                            <div>
+                                <form action="/action_page.php">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="name" placeholder="tiềm kiếm và thêm vào giỏ hàng" name="tiêu đề">
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="col-md-4" >
+
+                            <div class="qqq">
+                                <a class="navbar-brand" href="giohang1.html">
+                                    <i class="fa fa-shopping-cart" style="color: white; font-size: 36px;"></i>
+                                </a>
+                                <span class="ee">Giỏ hàng </span>
+
+
+                            </div>
+                            <div class="oto-header-banner dndk" id="topActionLiveUpBanner">
+                                <table class="table" style="font-size: 80%; color: white;">
+                                    <thead>
+                                        <tr>
+                                            <th><a href="dangnhap.html" class="text-dark">Đăng nhập</a></th>
+                                            <th><a href="dangky.html" class="text-dark">Đăng ký</a></th>
+                                        </tr>
+                                    </thead>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row menu1">
+            <nav>
+                <div class="toggle">
+                    <i class="fas fa-align-justify"></i>
+                </div>
+                <ul>
+                    <li class="dropdown"><i class="material-icons" style="color: white;">view_headline</i>&nbsp;<a href="#" class="text-white">Danh mục sản phẩm</a>
+                        <ul class="m1">
+                            <li><a class="dropdown-item" href="vanhoc.html">Văn học</a></li>
+                            <li><a class="dropdown-item" href="#">Thiếu nhi</a></li>
+                            <li><a class="dropdown-item" href="#">Kinh doanh</a></li>
+                            <li><a class="dropdown-item" href="#">Tác phẩm kinh điển</a></li>
+                            <li><a class="dropdown-item" href="#">Khoa học - Công nghệ</a></li>
+                            <li><a class="dropdown-item" href="#">Chăm sóc gia đình</a></li>
+                            <li><a class="dropdown-item" href="#">Truyện tranh</a></li>
+                            <li><a class="dropdown-item" href="#">Tác phẩm chọn lọc</a></li>
+                        </ul>
+                    </li>
+                    <li><i class="material-icons" style="color: white;">pan_tool</i>&nbsp;<a href="sachotobanchay.html" class="text-white">Sách oto bán chạy</a></li>
+                    <li><i class="material-icons" style="color: red;">whatshot</i>&nbsp;<a href="giamgia.html" class="text-white">deal hot trong ngày</a></li>
+                    <li><i class="material-icons" style="color: white;">assignment</i>&nbsp;<a href="#" class="text-white">kiểm tra đơn hàng</a></li>
+                    <li><i class="material-icons" style="color: white;">local_shipping</i>&nbsp;<a href="#" class="text-white">super ship?</a></li>
+                </ul>
+
+            </nav>
+            <script type="text/javascript">
+                $(document).ready(function () {
+                    $('.menu1').click(function () {
+                        $('ul').toggleClass('active');
+                    })
+                })
+            </script>
+        </div>
+        <div class="container-fluid menu-ab">
+            <div class="row">
+                <div class="col-md-2">
+
+                </div>
+                <div class="col-md-8">
+                    <div class="row" style="padding: 10px 0 50px 0;">
+                        <span style="color: white; text-decoration: underline; display: list-item;"><a href="index.html">Trang chủ</a>&nbsp;&gt;&nbsp;Deal hot trong ngày</span>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-12">
+                            <div class="carousel carousel-showmanymoveone slide" id="itemslider">
+                                <div class="carousel-inner">
+
+                                    <div class="item active">
+                                        <div class="col-xs-12 col-sm-6 col-md-2">
+                                            <a href="sanpham.html"><img src="image/10990.jpg" class="img-responsive center-block"></a>
+                                            <h4 class="text-center">Đắc nhân tâm</h4>
+                                            <h5 class="text-center">76.000 VND</h5>
+                                        </div>
+                                    </div>
+
+                                    <div class="item">
+                                        <div class="col-xs-12 col-sm-6 col-md-2">
+                                            <a href="#"><img src="image/11447.jpg" class="img-responsive center-block"></a>
+                                            <h4 class="text-center">Khéo ăn nói s..</h4>
+                                            <h5 class="text-center">110.000 VND</h5>
+                                        </div>
+                                    </div>
+
+                                    <div class="item">
+                                        <div class="col-xs-12 col-sm-6 col-md-2">
+                                            <a href="#"><img src="image/11706.jpg" class="img-responsive center-block"></a>
+                                            <h4 class="text-center">Hành trình v...</h4>
+                                            <h6 class="text-center">78.000 VND</h6>
+                                        </div>
+                                    </div>
+
+                                    <div class="item">
+                                        <div class="col-xs-12 col-sm-6 col-md-2">
+                                            <a href="#"><img src="image/12004.jpg" class="img-responsive center-block"></a>
+                                            <h4 class="text-center">Vì sao họ thà..</h4>
+                                            <h5 class="text-center">52.000 VND</h5>
+                                        </div>
+                                    </div>
+
+                                    <div class="item">
+                                        <div class="col-xs-12 col-sm-6 col-md-2">
+                                            <a href="#"><img src="image/13728.jpg" class="img-responsive center-block"></a>
+                                            <h4 class="text-center">Tôi muốn cuộc ...</h4>
+                                            <h5 class="text-center">100.000 VND</h5>
+                                        </div>
+                                    </div>
+
+
+
+                                </div>
+                                <!-- left,right control -->
+                                <div id="slider-control">
+                                    <a class="left carousel-control" href="#itemslider" data-slide="prev"><img src="image/arrow_left.png" alt="Left" class="img-responsive"></a>
+                                    <a class="right carousel-control" href="#itemslider" data-slide="next"><img src="image/arrow_right.png" alt="Right" class="img-responsive"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-12">
+                            <div class="carousel carousel-showmanymoveone slide" id="itemslider1">
+                                <div class="carousel-inner">
+
+                                    <div class="item active">
+                                        <div class="col-xs-12 col-sm-6 col-md-2">
+                                            <a href="#"><img src="image/19709.jpg" class="img-responsive center-block"></a>
+                                            <h4 class="text-center">Thay đổi hay là chết</h4>
+                                            <h5 class="text-center">400.000 VND</h5>
+                                        </div>
+                                    </div>
+
+                                    <div class="item">
+                                        <div class="col-xs-12 col-sm-6 col-md-2">
+                                            <a href="#"><img src="image/14988.jpg" class="img-responsive center-block"></a>
+                                            <h4 class="text-center">Người giàu có nh...</h4>
+                                            <h5 class="text-center">58.000 VND</h5>
+                                        </div>
+                                    </div>
+
+                                    <div class="item">
+                                        <div class="col-xs-12 col-sm-6 col-md-2">
+                                            <a href="#"><img src="image/16535.jpg" class="img-responsive center-block"></a>
+                                            <h4 class="text-center">Mưu sự tại nhân</h4>
+                                            <h5 class="text-center">80.000 VND</h5>
+                                        </div>
+                                    </div>
+
+                                    <div class="item">
+                                        <div class="col-xs-12 col-sm-6 col-md-2">
+                                            <a href="#"><img src="image/16751.jpg" class="img-responsive center-block"></a>
+                                            <h4 class="text-center">Tư duy đa chiều</h4>
+                                            <h5 class="text-center">149.000 VND</h5>
+                                        </div>
+                                    </div>
+
+                                    <div class="item">
+                                        <div class="col-xs-12 col-sm-6 col-md-2">
+                                            <a href="#"><img src="image/16781.jpg" class="img-responsive center-block"></a>
+                                            <h4 class="text-center">Tốc độ của niềm tin</h4>
+                                            <h5 class="text-center">126.000 VND</h5>
+                                        </div>
+                                    </div>
+
+                                    <div class="item">
+                                        <div class="col-xs-12 col-sm-6 col-md-2">
+                                            <a href="#"><img src="image/17021.jpg" class="img-responsive center-block"></a>
+                                            <h4 class="text-center">Dấu vết của mẹ</h4>
+                                            <h5 class="text-center">28.000 VND</h5>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <!-- left,right control -->
+                                <div id="slider-control">
+                                    <a class="left carousel-control" href="#itemslider1" data-slide="prev"><img src="image/arrow_left.png" alt="Left" class="img-responsive"></a>
+                                    <a class="right carousel-control" href="#itemslider1" data-slide="next"><img src="image/arrow_right.png" alt="Right" class="img-responsive"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-12">
+                            <div class="carousel carousel-showmanymoveone slide" id="itemslider2">
+                                <div class="carousel-inner">
+
+                                    <div class="item active">
+                                        <div class="col-xs-12 col-sm-6 col-md-2">
+                                            <a href="#"><img src="image/17210.jpg" class="img-responsive center-block"></a>
+                                            <h4 class="text-center">Tối ưu hóa trí nhớ</h4>
+                                            <h5 class="text-center">119.000 VND</h5>
+                                        </div>
+                                    </div>
+
+                                    <div class="item">
+                                        <div class="col-xs-12 col-sm-6 col-md-2">
+                                            <a href="#"><img src="image/17796.jpg" class="img-responsive center-block"></a>
+                                            <h4 class="text-center">Học từ cuộc sống</h4>
+                                            <h5 class="text-center">56.000 VND</h5>
+                                        </div>
+                                    </div>
+
+                                    <div class="item">
+                                        <div class="col-xs-12 col-sm-6 col-md-2">
+                                            <a href="#"><img src="image/17292.jpg" class="img-responsive center-block"></a>
+                                            <h4 class="text-center">Đừng để tiền ng..</h4>
+                                            <h5 class="text-center">56.000 VND</h5>
+                                        </div>
+                                    </div>
+
+                                    <div class="item">
+                                        <div class="col-xs-12 col-sm-6 col-md-2">
+                                            <a href="#"><img src="image/17477.jpg" class="img-responsive center-block"></a>
+                                            <h4 class="text-center">Học như một th..</h4>
+                                            <h5 class="text-center">129.000 VND</h5>
+                                        </div>
+                                    </div>
+
+                                    <div class="item">
+                                        <div class="col-xs-12 col-sm-6 col-md-2">
+                                            <a href="#"><img src="image/17481.jpg" class="img-responsive center-block"></a>
+                                            <h4 class="text-center">Nhà phát min..</h4>
+                                            <h5 class="text-center">99.000 VND</h5>
+                                        </div>
+                                    </div>
+
+                                    <div class="item">
+                                        <div class="col-xs-12 col-sm-6 col-md-2">
+                                            <a href="#"><img src="image/9966.jpg" class="img-responsive center-block"></a>
+                                            <h4 class="text-center">Quản lý thời gian</h4>
+                                            <h5 class="text-center">70.000 VND</h5>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div id="slider-control">
+                                    <a class="left carousel-control" href="#itemslider2" data-slide="prev"><img src="image/arrow_left.png" alt="Left" class="img-responsive"></a>
+                                    <a class="right carousel-control" href="#itemslider2" data-slide="next"><img src="image/arrow_right.png" alt="Right" class="img-responsive"></a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-12">
+                            <div class="carousel carousel-showmanymoveone slide" id="itemslider3">
+                                <div class="carousel-inner">
+
+                                    <div class="item active">
+                                        <div class="col-xs-12 col-sm-6 col-md-2">
+                                            <a href="#"><img src="image/sachvanhoc/nghe.jpg" class="img-responsive center-block"></a>
+                                            <h4 class="text-center">Nghe theo cái bụng</h4>
+                                            <h5 class="text-center">55.000 VND</h5>
+                                        </div>
+                                    </div>
+
+                                    <div class="item">
+                                        <div class="col-xs-12 col-sm-6 col-md-2">
+                                            <a href="#"><img src="image/sachvanhoc/branding 4.0.jpg" class="img-responsive center-block"></a>
+                                            <h4 class="text-center">Branding 4.0</h4>
+                                            <h5 class="text-center">189.000 VND</h5>
+                                        </div>
+                                    </div>
+
+                                    <div class="item">
+                                        <div class="col-xs-12 col-sm-6 col-md-2">
+                                            <a href="#"><img src="image/sachvanhoc/buoi.jpg" class="img-responsive center-block"></a>
+                                            <h4 class="text-center">Buổi sáng diệu kỳ</h4>
+                                            <h5 class="text-center">99.000 VND</h5>
+                                        </div>
+                                    </div>
+
+                                    <div class="item">
+                                        <div class="col-xs-12 col-sm-6 col-md-2">
+                                            <a href="#"><img src="image/sachvanhoc/sao.jpg" class="img-responsive center-block"></a>
+                                            <h4 class="text-center">Bắt đầu với câu h..</h4>
+                                            <h5 class="text-center">79.000 VND</h5>
+                                        </div>
+                                    </div>
+
+                                    <div class="item">
+                                        <div class="col-xs-12 col-sm-6 col-md-2">
+                                            <a href="#"><img src="image/sachvanhoc/cha.jpg" class="img-responsive center-block"></a>
+                                            <h4 class="text-center">Cha mẹ Pháp khô..</h4>
+                                            <h5 class="text-center">45.000 VND</h5>
+                                        </div>
+                                    </div>
+
+                                    <div class="item">
+                                        <div class="col-xs-12 col-sm-6 col-md-2">
+                                            <a href="#"><img src="image/sachvanhoc/cu.jpg" class="img-responsive center-block"></a>
+                                            <h4 class="text-center">Cứ để lối đi thà..</h4>
+                                            <h5 class="text-center">70.000 VND</h5>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div id="slider-control">
+                                    <a class="left carousel-control" href="#itemslider3" data-slide="prev"><img src="image/arrow_left.png" alt="Left" class="img-responsive"></a>
+                                    <a class="right carousel-control" href="#itemslider3" data-slide="next"><img src="image/arrow_right.png" alt="Right" class="img-responsive"></a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="row" style="float: right; padding-block-start: 30px;">
+                        <ul class="pagination justify-content-end">
+                            <li class="page-item disabled"><a class="page-link" href="">Previous</a></li>
+                            <li class="page-item active"><a class="page-link" href="vanhoc.html">1</a></li>
+                            <li class="page-item"><a class="page-link" href="vanhoc2.html">2</a></li>
+                            <li class="page-item"><a class="page-link" href="vanhoc3.html">3</a></li>
+                            <li class="page-item"><a class="page-link" href="vanhoc2.html">Next</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-2">
+
+                </div>
+            </div>  
+        </div>
+
+
+        <div class="container-fluid menu-ab" style="background-color: #0B667D;">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="nnn"><h4>LIÊN HỆ VỚI OTO</h4></div>
+                    <a href="#" style="color: black;"><h6>Thứ 2 đến CN: 9h - 18h (Hotline), 7h - 22h (chat trực tuyến)</h6></a>
+                    <a href="#" style="color: black;"><h6>Trung tâm hỗ trợ</h6></a>
+                    <a href="#" style="color: black;"><h6>Hướng dẫn đặt hàng</h6></a>
+                    <a href="#" style="color: black;"><h6>Giao hàng và nhận hàng</h6></a>
+                    <a href="#" style="color: black;"><h6>Hướng dẫn đổi trả hàng</h6></a>
+                </div>
+                <div class="col-md-3">
+                    <div class="nnn"><h4>OTO VIỆT NAM</h4></div>
+                    <div><a href="#" style="color: black;">Về Oto Việt Nam</a></div>
+                    <div><a href="#" style="color: black;">Bán hàng cùng Oto</a></div>
+                    <div><a href="#" style="color: black;">Tuyển dụng</a></div>
+                    <div><a href="#" style="color: black;">Điều khoản mua bán hàng hóa</a></div>
+                    <div><a href="#" style="color: black;">Chính sách bảo mật</a></div>
+                </div>
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="nnn"><h4>ĐĂNG KÝ NHẬN BẢN TIN TỪ OTO</h4></div>
+                    </div>
+                    <div class="row">
+                        <nav class="navbar navbar-light bg-light justify-content-between">
+
+                            <form class="form-inline">
+                                <input class="form-control mr-sm-2" type="search" placeholder="Your Email Address" aria-label="Search">
+                                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Đăng kí</button>
+                            </form>
+                        </nav>'
+                    </div>
+                    <div>
+                        CÔNG TY TNHH RECESS
+                        Giấy CNĐKDN: 0308808576 – Ngày cấp: 06/5/2009, được sửa đổi lần thứ 15 ngày 24/7/2017.
+                        Cơ quan cấp: Phòng Đăng ký kinh doanh – Sở kế hoạch và Đầu tư TP.HCM
+                        Địa chỉ đăng ký kinh doanh: Tầng 19, Tòa nhà Saigon Centre – Tháp 2, 67 Lê Lợi, Phường Bến Nghé, Quận 1, Tp. Hồ Chí Minh, Việt Nam.
+                    </div>
+                </div>
+            </div>
+            <div class="row bg-white">
+
+
+                <div class="col-md-4 pb-3">
+                    CÔNG THỨC THANH TOáN
+                </div>
+                <div class="col-md-4">DỊCH VỤ GIAO HÀNG
+                </div>
+                <div class="col-md-4">CHỨNG NHẬN
+                </div>
+            </div>
+            <div class="row bg-white">
+                <div class="col-md-4">
+                    <img src="image/footer/visa.PNG">
+                    <img src="image/footer/visa2.PNG">
+                    <img src="image/footer/visa3.PNG">
+                    <img src="image/footer/visa4.PNG">
+                </div>
+                <div class="col-md-4">
+                    <div>
+                        <img src="image/footer/lelexpress.PNG">
+                        <img src="image/footer/lelexpress2.PNG">
+                    </div>
+                    <div><img src="image/footer/lelexpress3.PNG"></div>
+
+                </div>
+                <div class="col-md-4">
+                    <img src="image/footer/huyhieu.PNG">
+
+
+                </div>
+            </div>
+            <div class="row bg-light" style="padding-top: 10px;">
+
+
+                <div class="col-md-8 bg-light">
+                    <div>Liên hệ: 0989 467 439( Trâm)</div>
+                    <div>Địa chỉ: Phòng tin,32 Phan Đăng Lưu</div>
+                </div>
+                <div class="col-md-4" style="padding-left: 9em">
+                    <img src="image/footer/lienhe.PNG">
+                </div>
+            </div>
+        </div>
+    
+</body>
+</html>

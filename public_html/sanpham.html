@@ -1,0 +1,770 @@
+<html>
+    <head>
+        <title>OTO- Mang tri trức đến bên bạn</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
+        <link rel="stylesheet" href="styles/sanpham.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="bxSlider/jquery.bxslider.min.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="bxSlider/jquery.bxslider.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:400">
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,900">
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+       
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <script src="js/image_swap.js"></script>
+        <script src="bootstrap/bootstrap.min.js"></script>
+        <script src="bootstrap/popper.min.js"></script>
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <script src="bxSlider/jquery.bxslider.min.js"></script>
+        <script src="js/image_swap.js"></script>
+        <script src="bootstrap/bootstrap.min.js"></script>
+        <script src="bootstrap/popper.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.15.0/jquery.validate.min.js"></script>
+        <script src="js/validate.js"></script>
+        <link href="styles/rateit.css" rel="stylesheet" type="text/css">
+        <script src="js/jquery.rateit.js" type="text/javascript"></script> 
+        <style>
+            .menu1{
+                margin: 0;
+                padding: 0;
+                font-family: sans-serif;
+            }
+            nav{
+                width: 100%;
+                background:  #00316D;
+            }
+            ul{
+                width: 80%;
+                margin: 0 auto;
+                padding: 0;
+            }
+            ul li{
+                list-style: none;
+                display: inline-block;
+                padding-right: 30px;
+            }
+            ul li:hover{
+                background: #e91e63;
+            }
+            ul li a{
+                color: #fff;
+                text-decoration: none;
+            }
+            .toggle{
+                width: 100%;
+                padding: 10px 20px;
+                text-align: right;
+                background: #001f44;
+                box-sizing: border-box;
+                display: none;
+                color: #fff
+            }
+            @media (max-width: 768px)
+            {
+                .toggle{
+                    display: block;
+                }
+
+                ul{
+                    width: 100%;
+                    display:none;
+                }
+                ul li{
+                    display: block;
+                    text-align: center;
+                }
+                .active{
+                    display: block;
+                }
+                .mn{
+                    display: none !important;
+                }
+            }
+            a.al{
+                text-decoration: none;
+                color: white;
+            }
+            .dropdown:hover .m1{
+                display: block;
+            }
+            .m1 {
+                display: none;
+                position: absolute;
+                background-color: #f9f9f9;
+                min-width: 245px;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                z-index: 1;
+            }
+            .dropdown-item:hover{
+                background-color: #f1f1f1;
+            }
+            a{
+                text-decoration: none !important;  
+            }
+            .theloai{
+                background-color: #EFEFEF;
+            }
+            
+            .gioithieu{
+                border: 1px solid #D5D5D5;
+                
+            }
+            .right{
+                border-right: 1px solid #D5D5D5;
+                padding: 3px 2px 3px 5px;
+            }
+        </style>
+        <script type="text/javascript">
+                            $(document).ready(function(){
+
+                          $('#itemslider').carousel({ interval: 3000 });
+
+                          $('.carousel-showmanymoveone .item').each(function(){
+                          var itemToClone = $(this);
+
+                          for (var i=1;i<6;i++) {
+                          itemToClone = itemToClone.next();
+
+                          if (!itemToClone.length) {
+                          itemToClone = $(this).siblings(':first');
+                          }
+
+                          itemToClone.children(':first-child').clone()
+                          .addClass("cloneditem-"+(i))
+                          .appendTo($(this));
+                          }
+                          });
+                          });
+
+                            </script>
+        
+
+    </head>
+    <body>
+<div class="container-fluid" style="background-color: #F4F4F4;" >
+        <div class="container-fluid" style="background-color: #F4F4F4;"  > 
+            <div class="row register" style="background-color: #0B667D; ">
+
+                <div class="col-md-2 col-sm-2" style="color: white; font-size:200%; padding-top: 1em;">
+                    <h1><a href="index.html">OTO.com</a></h1>
+                </div>
+                <div class="col-md-10">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <div class=" row justify-content-md-center">
+                                <div class="col-md-auto" style="color: white;"><h3>Xin chào! OTO có thể giúp gì cho bạn?</h3></div>
+                            </div>
+                            <div>
+                                <form action="/action_page.php">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="name" placeholder="tiềm kiếm và thêm vào giỏ hàng" name="tiêu đề">
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="col-md-4" >
+
+                            <div class="qqq">
+                                <a class="navbar-brand" href="giohang1.html">
+                                    <i class="fa fa-shopping-cart" style="color: white; font-size: 36px;"></i>
+                                </a>
+                                <span class="ee">Giỏ hàng </span>
+
+
+                            </div>
+                            <div class="oto-header-banner dndk" id="topActionLiveUpBanner">
+                                <table class="table" style="font-size: 80%; color: white;">
+                                    <thead>
+                                        <tr>
+                                            <th><a href="dangnhap.html" class="text-dark">Đăng nhập</a></th>
+                                            <th><a href="dangky.html" class="text-dark">Đăng ký</a></th>
+                                        </tr>
+                                    </thead>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row menu1">
+            <nav>
+                <div class="toggle">
+                    <i class="fas fa-align-justify"></i>
+                </div>
+                <ul>
+                    <li class="dropdown"><i class="material-icons" style="color: white;">view_headline</i>&nbsp;<a href="#" class="text-white">Danh mục sản phẩm</a>
+                        <ul class="m1">
+                            <li><a class="dropdown-item" href="vanhoc.html">Văn học</a></li>
+                            <li><a class="dropdown-item" href="#">Thiếu nhi</a></li>
+                            <li><a class="dropdown-item" href="#">Kinh doanh</a></li>
+                            <li><a class="dropdown-item" href="#">Tác phẩm kinh điển</a></li>
+                            <li><a class="dropdown-item" href="#">Khoa học - Công nghệ</a></li>
+                            <li><a class="dropdown-item" href="#">Chăm sóc gia đình</a></li>
+                            <li><a class="dropdown-item" href="#">Truyện tranh</a></li>
+                            <li><a class="dropdown-item" href="#">Tác phẩm chọn lọc</a></li>
+                        </ul>
+                    </li>
+                    <li><i class="material-icons" style="color: white;">pan_tool</i>&nbsp;<a href="sachotobanchay.html" class="text-white">Sách oto bán chạy</a></li>
+                    <li><i class="material-icons" style="color: red;">whatshot</i>&nbsp;<a href="giamgia.html" class="text-white">deal hot trong ngày</a></li>
+                    <li><i class="material-icons" style="color: white;">assignment</i>&nbsp;<a href="#" class="text-white">kiểm tra đơn hàng</a></li>
+                    <li><i class="material-icons" style="color: white;">local_shipping</i>&nbsp;<a href="#" class="text-white">super ship?</a></li>
+                </ul>
+
+            </nav>
+            <script type="text/javascript">
+                $(document).ready(function () {
+                    $('.menu1').click(function () {
+                        $('ul').toggleClass('active');
+                    })
+                })
+            </script>
+        </div>
+        <div class="row" style="background-color: EBEBEB;">
+            <a href="#">Nhà sách OTO </a>><a href="#">sách bán chạy</a>><a href="#">đắc nhân tâm</a>
+        </div>
+        <div class="row" style="background: white; padding-top: 2em;">
+            <div class="col-md-3" style=" padding-top: 1em;">
+                <p><img src="image/sachkynangsong/dacnhantam.jpg" alt="" id="image"></p>
+                <ul id="image_list">
+                    <li><a href="images/sachkynangsong/dacnhantam.jpg" title="james allison: 1-1">
+                            <img src="image/sachkynangsong/dacnhantam.jpg" alt=""></a></li>
+
+                </ul>
+            </div>
+            <div class="col-md-9">
+                <div class="row">
+                    <div class="col-md-8" >
+                        <div class="row">
+                            <h2 >Đắc Nhân Tâm</h2>- March,2016
+                        </div>
+                        <div class="row"> <i class="material-icons" style="color:orange;">star</i> <i class="material-icons" style="color:orange">star</i><i class="material-icons" style="color:orange">star</i><i class="material-icons" style="color:orange">star</i><i class="material-icons" style="color:orange">star_half</i>
+                        </div>
+                        <div class="row" style="border-bottom: 1px solid #EBEBEB; padding-bottom: .5em;">
+
+                            <div class="col-md-4">Tác giả: <span style="color: blue;">Dale Carnegie</span></div>
+                            <div class="col-md-2"><span style="color: blue;">Bìa mềm</span></div>
+                            <div class="col-md-4">SKU:  5602735071550</div>
+                            <div class="col-md-2"></div>
+                        </div>
+
+
+                        <div class="row" style="border: 1px solid #EBEBEB; padding-top: 1em;">
+                            <div class="col-md-5" style="border-right: 1px solid #EBEBEB;" >
+                                <div class="row" ><h5 class="gia"> 49.297<u>đ</u></h5>&nbsp;&nbsp;(<strike>76.000<u>đ</u></strike>)</div>
+                                <div class="row" >Tiết kiệm: &nbsp;<p style="color: red;">30%</p>&nbsp;(26.703<u>đ</u>)</div>
+
+
+                            </div>
+                            <div class="col-md-2" >
+                                <h6>Order:</h6>
+                                <select   style="width: 50px; height: 30px; border-radius: 10%;" > 
+                                    <option value="ngay">1</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                    <option value="13">13</option>
+                                    <option value="14">14</option>
+                                    <option value="15">15</option>
+                                    <option value="16">16</option>
+                                    <option value="17">17</option>
+                                    <option value="18">18</option>
+                                    <option value="19">19</option>
+                                    <option value="20">20</option>
+                                    <option value="21">21</option>
+                                    <option value="22">22</option>
+                                    <option value="23">23</option>
+                                    <option value="24">24</option>
+                                    <option value="25">25</option>
+                                    <option value="26">26</option>
+                                    <option value="27">27</option>
+                                    <option value="28">28</option>
+                                    <option value="29">29</option>
+                                    <option value="30">30</option>
+
+                                </select>  
+                            </div>
+                            <div class="col-md-5">
+
+                                <a href="giohang1.html"><input class="text-white btn btn-warning" value="CHỌN MUA" type="submit" id="sumit"></a>
+
+
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="more">
+                                <h6>Tại sao Đắc Nhân Tâm luôn trong Top sách bán chạy nhất thế giới?</h6>
+                                <br>
+                                Bởi vì đó là cuốn sách mọi người đều nên đọc.
+                                <br><br>
+                                Hiện nay có một sự hiểu nhầm đã xảy ra. Tuy Đắc Nhân Tâm là tựa sách hầu hết mọi người đều biết đến, vì những danh tiếng và mức độ phổ biến, nhưng một số người lại “ngại” đọc. Lý do vì họ tưởng đây là cuốn sách “dạy làm người” nên có tâm lý e ngại. Có lẽ là do khi giới thiệu về cuốn sách, người ta luôn gắn với miêu tả đây là “nghệ thuật đối nhân xử thế”, “nghệ thuật thu phục lòng người”… Những cụm từ này đã không còn hợp với hiện nay nữa, gây cảm giác xa lạ và không thực tế.
+                                Nhưng đâu phải thế, Đắc Nhân Tâm là cuốn sách không hề lỗi thời! <br>
+
+                            </div>
+                            <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+                            <script type="text/javascript">
+                $(document).ready(function () {
+                    // Configure/customize these variables.
+                    var showChar = 400;
+                    var ellipsestext = "...";
+                    var moretext = "read more>";
+                    var lesstext = "read less";
+                    $('.more').each(function () {
+                        var content = $(this).html();
+                        if (content.length > showChar) {
+                            var c = content.substr(0, showChar);
+                            var h = content.substr(showChar, content.length - showChar);
+                            var html = c + '<span class="moreellipses">' + ellipsestext + '&nbsp;</span><span class="morecontent"><span>' + h + '</span>&nbsp;&nbsp;<a href="" class="morelink">' + moretext + '</a></span>';
+                            $(this).html(html);
+                        }
+                    });
+                    $(".morelink").click(function () {
+                        if ($(this).hasClass("less")) {
+                            $(this).removeClass("less");
+                            $(this).html(moretext);
+                        } else {
+                            $(this).addClass("less");
+                            $(this).html(lesstext);
+                        }
+                        $(this).parent().prev().toggle();
+                        $(this).prev().toggle();
+                        return false;
+                    });
+                });
+                            </script>
+
+                        </div>
+                    </div>
+                    <div class="col-md-4" style="margin-top: 2em;" >
+                        <div style="border: 4px solid #EBEBEB;">
+                            <div class="time"><i class="material-icons" style="font-size:30px;color: pink">query_builder</i>&nbsp;&nbsp;DỰ KIẾN GIAO HÀNG</div>
+                            <div class="place"><i class="material-icons" style="font-size:30px;color:red">location_on</i> <a href="#" style="text-decoration: none;">Phương Đông, Đà Nẵng</a></div>
+                            <div class="time"> 
+                                <div class="row">
+                                    <div class="col-md-2"><i class="material-icons" style="font-size:30px;color:pink">local_shipping</i></div>
+                                    <div class="col-md-10">giáo hàng tiêu chuẩn từ th2-thu5, giao hàng tiết kiệm từ thứ 7- chủ nhật</div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="lienhe">
+                            <div class="row" style="border: 1px dashed #EBEBEB;">
+                                <div class="col-md-2"><i class="material-icons" style="font-size:30px;">call</i></div>
+                                <div class="col-md-10">hotline 0989 467 439</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-2"><i class="material-icons" style="font-size:30px;">mail_outline</i></div>
+                                <div class="col-md-10">nangtihon611@gmail.com</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="row pd">KHÁCH HÀNG NHẬN XÉT</div>
+        <div class="row bg " >
+            
+            <div class="col-md-6 margin">
+                <div class="row">THÔNG TIN CHI TIẾT</div>
+                <div class="row">
+                    <div class="col-md-12">
+                <div class=" row gioithieu ">
+                    <div class="col-md-3 theloai right" >
+                        <div><h6>Công ty phát hành</h6></div>
+                    </div>
+                    <div class="col-md-9 right">
+                        <div>Vietbook</div>
+                    </div>
+                        
+                </div>
+                 <div class=" row gioithieu ">
+                    <div class="col-md-3 theloai right ">
+                        <div><h6>Tác giả</h6></div>
+                    </div>
+                    <div class="col-md-9 right">
+                        <div>Dale Canegie</div>
+                    </div>
+                        
+                </div>
+                 <div class="row gioithieu ">
+                    <div class="col-md-3 theloai right">
+                        <div><h6>Ngày xuất bản</h6></div>
+                    </div>
+                    <div class="col-md-9 right">
+                        <div>05-2019</div>
+                    </div>
+                        
+                </div>
+                 <div class="row gioithieu ">
+                    <div class="col-md-3 theloai right">
+                        <div><h6>Kích thước</h6></div>
+                    </div>
+                    <div class="col-md-9 right">
+                        <div>14,2cm x 8cm</div>
+                    </div>
+                        
+                </div>
+                 <div class="row gioithieu ">
+                    <div class="col-md-3 theloai right">
+                        <div><h6>Nhà xuất bản</h6></div>
+                    </div>
+                    <div class="col-md-9 right">
+                        <div>OTO</div>
+                    </div>
+                        
+                </div>
+                 <div class="row gioithieu ">
+                    <div class="col-md-3 theloai right">
+                        <div><h6>Dịch giả</h6></div>
+                    </div>
+                    <div class="col-md-9 right">
+                        <div>Bảo Trâm</div>
+                    </div>
+                        
+                </div>
+                 <div class="row gioithieu ">
+                    <div class="col-md-3 theloai right">
+                        <div><h6>Loại bìa</h6></div>
+                    </div>
+                    <div class="col-md-9 right">
+                        <div>Bìa cứng</div>
+                    </div>
+                        
+                </div>
+                 <div class="row gioithieu ">
+                    <div class="col-md-3 theloai right">
+                        <div><h6>Số trang</h6></div>
+                    </div>
+                    <div class="col-md-9 right">
+                        <div>107</div>
+                    </div>
+                        
+                </div>
+                 <div class="row gioithieu ">
+                    <div class="col-md-3 theloai right">
+                        <div><h6>SDU</h6></div>
+                    </div>
+                    <div class="col-md-9 right">
+                        <div>5602735071550</div>
+                    </div>
+                        
+                </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6" style="border-right: 1px solid #EBEBEB;">
+                <div class="pd"><h6>GỬI NHẬN XÉT CỦA BẠN</h6></div>
+                <div >1.Đánh giá của bạn về sản phẩm này: 
+                    <span class="rateit"></span>
+                    
+                </div>
+                <div class="pd1" >2.Tiêu đề của nhận xét:</div>
+                <div>
+                    <form action="/action_page.php">
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="name" placeholder="nhập tiêu đề nhận xét" name="tiêu đề">
+                        </div>
+                    </form>
+                </div>
+                <div>3.Viết nhận xét của bạn vào bên dưới:</div>
+                <div>
+                    <form action="/action_page.php">
+                        <div class="form-group">
+                            <textarea name="comment" placeholder="Comments" class="form-control "></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div>
+                    <form action="/action_page.php">
+                        <div class="gui"><button type="submit" class="btn btn-warning">GỬI NHẬN XÉT</button></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- Item slider-->
+                
+        <div class="row" style="background: #EBEBEB;">.</div>
+        <div class="container">
+        <div class="row"><h6>Câu hỏi về sản phẩm này(6)</h6></div>
+ 
+            <div class="row" style="background: white;">
+                <div class="col-md-12">
+                    <div class="row hoi">
+                        <div class="col-md-1"></div>
+                        <div class="col-md-11">
+                            <div><h6>phuong thức thanh toán</h6></div>
+                            <div>
+                                thẻ visa tiền nhiều bạn nha
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row hoi">
+                        <div class="col-md-1"></div>
+                        <div class="col-md-11">
+                            <div><h6>Bán rẻ không</h6></div>
+                            <div>Chào bạn, Oto cam kết rẻ nhất trên thị trường bạn nha</div>
+                        </div>
+                    </div>
+                    <div class="row hoi">
+                        <div class="col-md-1"></div>
+                        <div class="col-md-11">
+                            <div><h6>Bọc sách có thể mua từng quyển ko ạ, hay phải mua 99k luôn</h6></div>
+                            <div>Chào bạn, mua từng quyển bạn nha</div>
+                        </div>
+                    </div>
+                        
+                    <div class="row" style="padding: 2em 1em 2em 1em;">
+                        
+                        <div class="col-md-9" style="width: 100%;">
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="name" placeholder="" name="cau hoi">
+                        </div>
+                        </div>
+                        <div class="col-md-3">
+                            
+                            <button type="submit" class="btn btn-warning">GỬI CÂU HỎI</button></div>
+                    
+                        </div>
+                    </div>
+                    
+                </div>
+            
+            </div>
+        </div>
+        
+        <div class="row"><h6>NHận xét từ khách hàng</h6></div>
+        <div class="row" style="background-color: white; padding-bottom: 2em;">
+            <div class="col-md-3 danhgiasao">
+                <div>Đánh giá trung bình</div>
+                <div class="sao">4.5/5 </div>
+                   
+                <div><i class="material-icons" style="color:orange;">star</i> <i class="material-icons" style="color:orange">star</i><i class="material-icons" style="color:orange">star</i><i class="material-icons" style="color:orange">star</i><i class="material-icons" style="color:orange">star_half</i></div>
+                <div>(20 nhận xét)</div>
+
+            </div>
+            <div class="col-md-5">
+            <div class="row">
+              <div class="side">
+                <div>5 star</div>
+              </div>
+              <div class="middle">
+                <div class="bar-container">
+                  <div class="bar-5"></div>
+                </div>
+              </div>
+              <div class="side right">
+                <div>150</div>
+              </div>
+              <div class="side">
+                <div>4 star</div>
+              </div>
+              <div class="middle">
+                <div class="bar-container">
+                  <div class="bar-4"></div>
+                </div>
+              </div>
+              <div class="side right">
+                <div>63</div>
+              </div>
+              <div class="side">
+                <div>3 star</div>
+              </div>
+              <div class="middle">
+                <div class="bar-container">
+                  <div class="bar-3"></div>
+                </div>
+              </div>
+              <div class="side right">
+                <div>15</div>
+              </div>
+              <div class="side">
+                <div>2 star</div>
+              </div>
+              <div class="middle">
+                <div class="bar-container">
+                  <div class="bar-2"></div>
+                </div>
+              </div>
+              <div class="side right">
+                <div>6</div>
+              </div>
+              <div class="side">
+                <div>1 star</div>
+              </div>
+              <div class="middle">
+                <div class="bar-container">
+                  <div class="bar-1"></div>
+                </div>
+              </div>
+              <div class="side right">
+                <div>20</div>
+              </div>
+            </div>
+            </div>
+            <div class="col-md-4 danhgiasao1">
+                <div> <h6>Chia sẻ của bạn về sản phẩm</h6></div>
+                <div><button type="submit" style="background-color: yellow; padding: 0.5em 3em 0.5em 3em;">Viết nhận xét sản phẩm</button></div>
+                
+            </div>
+
+        </div>
+           
+            <div class="row" style="background: white;">
+                <div class="col-md-12">
+                    <div class="row">
+                        <div class="col-md-2">
+                            <img src="image/logo/lau.png">
+                        </div>
+                        <div class="col-md-10">
+                            <div><h6><i class="material-icons" style="color:orange;font-size: 20px">star</i> <i class="material-icons" style="color:orange;font-size: 20px">star</i><i class="material-icons" style="color:orange;font-size: 20px">star</i><i class="material-icons" style="color:orange;font-size: 20px">star</i><i class="material-icons" style="color:orange;font-size: 20px">star</i>&nbsp; Sách OTO bán quá rẻ</h6>
+                            </div>
+                            <div class="nhanxet" >Đã mua sản phẩm này tại OTO</div>
+                            <div>
+                                sách đã rẻ nay lại được trợ giá thich quá 
+                            </div>
+                            <div class="nhanxet1">2 người bạn đã thích nhận xét này</div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2">
+                            <img src="image/logo/lau.png">
+                        </div>
+                        <div class="col-md-10">
+                            <div><h6><i class="material-icons" style="color:orange;font-size: 20px">star</i> <i class="material-icons" style="color:orange;font-size: 20px">star</i><i class="material-icons" style="color:orange;font-size: 20px">star</i><i class="material-icons" style="color:orange;font-size: 20px">star</i><i class="material-icons" style="color:orange;font-size: 20px">star</i>&nbsp; Giao hàng nhnah ghê, anh shiper rất nhiệt tình</h6>
+                            </div>
+                            <div class="nhanxet" >Đã mua sản phẩm này tại OTO</div>
+                            
+                            <div>Giao hàng trước thời hạng luônn</div>
+                            <div class="nhanxet1">2 người bạn đã thích nhận xét này</div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2">
+                            <img src="image/logo/lau.png">
+                        </div>
+                        <div class="col-md-10">
+                            <div><h6><i class="material-icons" style="color:orange;font-size: 20px">star</i> <i class="material-icons" style="color:orange;font-size: 20px">star</i><i class="material-icons" style="color:orange;font-size: 20px">star</i><i class="material-icons" style="color:orange;font-size: 20px">star</i><i class="material-icons" style="color:orange;font-size: 20px">star</i>&nbsp; tuyệt với</h6>
+                            </div>
+                            <div class="nhanxet" >Đã mua sản phẩm này tại OTO</div>
+                            <div>sách hay , ý nghĩa, bìa đẹp bookmat dễ thương </div>
+                            <div class="nhanxet1">2 người bạn đã thích nhận xét này</div>
+                        </div>
+                    </div>
+                    
+                </div>
+            
+            </div>
+        
+            
+
+        <div class="row" style="background: #EBEBEB;">.</div>
+        <div class="row">
+            
+        </div>
+        <div class="row" style="background-color: #0B667D">
+            <div class="col-md-3">
+                <div class="nnn"><h4>LIÊN HỆ VỚI OTO</h4></div>
+                <a href="#" style="color: black;"><h6>Thứ 2 đến CN: 9h - 18h (Hotline), 7h - 22h (chat trực tuyến)</h6></a>
+                <a href="#" style="color: black;"><h6>Trung tâm hỗ trợ</h6></a>
+                <a href="#" style="color: black;"><h6>Hướng dẫn đặt hàng</h6></a>
+                <a href="#" style="color: black;"><h6>Giao hàng và nhận hàng</h6></a>
+                <a href="#" style="color: black;"><h6>Hướng dẫn đổi trả hàng</h6></a>
+            </div>
+            <div class="col-md-3">
+                <div class="nnn"><h4>OTO VIỆT NAM</h4></div>
+                <div><a href="#" style="color: black;">Về Oto Việt Nam</a></div>
+                <div><a href="#" style="color: black;">Bán hàng cùng Oto</a></div>
+                <div><a href="#" style="color: black;">Tuyển dụng</a></div>
+                <div><a href="#" style="color: black;">Điều khoản mua bán hàng hóa</a></div>
+                <div><a href="#" style="color: black;">Chính sách bảo mật</a></div>
+            </div>
+            <div class="col-md-6">
+                <div class="row">
+                    <div class="nnn"><h4>ĐĂNG KÝ NHẬN BẢN TIN TỪ OTO</h4></div>
+                </div>
+                <div class="row">
+                    <nav class="navbar justify-content-between" style="background-color: #0B667D">
+
+                        <form class="form-inline">
+                            <input class="form-control mr-sm-2" type="search" placeholder="Your Email Address" aria-label="Search">
+                            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Đăng kí</button>
+                        </form>
+                    </nav>'
+                </div>
+                <div>
+                    CÔNG TY TNHH RECESS
+                    Giấy CNĐKDN: 0308808576 – Ngày cấp: 06/5/2009, được sửa đổi lần thứ 15 ngày 24/7/2017.
+                    Cơ quan cấp: Phòng Đăng ký kinh doanh – Sở kế hoạch và Đầu tư TP.HCM
+                    Địa chỉ đăng ký kinh doanh: Tầng 19, Tòa nhà Saigon Centre – Tháp 2, 67 Lê Lợi, Phường Bến Nghé, Quận 1, Tp. Hồ Chí Minh, Việt Nam.
+                </div>
+            </div>
+        </div>
+        <div class="row bg-white">
+
+
+            <div class="col-md-4 pb-3">
+                CÔNG THỨC THANH TOáN
+            </div>
+            <div class="col-md-4">DỊCH VỤ GIAO HÀNG
+            </div>
+            <div class="col-md-4">CHỨNG NHẬN
+            </div>
+        </div>
+        <div class="row bg-white">
+            <div class="col-md-4">
+                <img src="image/footer/visa.PNG">
+                <img src="image/footer/visa2.PNG">
+                <img src="image/footer/visa3.PNG">
+                <img src="image/footer/visa4.PNG">
+            </div>
+            <div class="col-md-4">
+                <div>
+                    <img src="image/footer/lelexpress.PNG">
+                    <img src="image/footer/lelexpress2.PNG">
+                </div>
+                <div><img src="image/footer/lelexpress3.PNG"></div>
+
+            </div>
+            <div class="col-md-4">
+                <img src="image/footer/huyhieu.PNG">
+
+
+            </div>
+        </div>
+        <div class="row bg-white" style="padding-top: 1em;">
+
+
+            <div class="col-md-8 bg-light">
+                <div>Liên hệ: 0989 467 439( Trâm)</div>
+                <div>Địa chỉ: Phòng tin,32 Phan Đăng Lưu</div>
+            </div>
+            <div class="col-md-4" style="padding-left: 9em">
+                <img src="image/footer/lienhe.PNG">
+            </div>
+        </div>
+</div>
+    </body>
+</html>

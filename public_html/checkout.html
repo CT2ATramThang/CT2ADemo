@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
+        <link rel="stylesheet" href="styles/checkout.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" id="bootstrap-css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <script src="bootstrap/bootstrap.min.js"></script>
+        <script src="bootstrap/popper.min.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" charset="utf-8"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+
+                /* Set rates + misc */
+                var taxRate = 0.05;
+                var shippingRate = 15.00;
+                var fadeTime = 300;
+
+
+                /* Assign actions */
+                $('.product-quantity input').change(function () {
+                    updateQuantity(this);
+                });
+
+                $('.product-removal button').click(function () {
+                    removeItem(this);
+                });
+
+
+                /* Recalculate cart */
+                function recalculateCart()
+                {
+                    var subtotal = 0;
+
+                    /* Sum up row totals */
+                    $('.product').each(function () {
+                        subtotal += parseFloat($(this).children('.product-line-price').text());
+                    });
+
+                    /* Calculate totals */
+                    var tax = subtotal * taxRate;
+                    var shipping = (subtotal > 0 ? shippingRate : 0);
+                    var total = subtotal + tax + shipping;
+
+                    /* Update totals display */
+                    $('.totals-value').fadeOut(fadeTime, function () {
+                        $('#cart-subtotal').html(subtotal.toFixed(3));
+                        $('#cart-tax').html(tax.toFixed(3));
+                        $('#cart-shipping').html(shipping.toFixed(3));
+                        $('#cart-total').html(total.toFixed(3));
+                        if (total == 0) {
+                            $('.checkout').fadeOut(fadeTime);
+                        } else {
+                            $('.checkout').fadeIn(fadeTime);
+                        }
+                        $('.totals-value').fadeIn(fadeTime);
+                    });
+                }
+
+
+                /* Update quantity */
+                function updateQuantity(quantityInput)
+                {
+                    /* Calculate line price */
+                    var productRow = $(quantityInput).parent().parent();
+                    var price = parseFloat(productRow.children('.product-price').text());
+                    var quantity = $(quantityInput).val();
+                    var linePrice = price * quantity;
+
+                    /* Update line price display and recalc cart totals */
+                    productRow.children('.product-line-price').each(function () {
+                        $(this).fadeOut(fadeTime, function () {
+                            $(this).text(linePrice.toFixed(3));
+                            recalculateCart();
+                            $(this).fadeIn(fadeTime);
+                        });
+                    });
+                }
+
+
+                /* Remove item from cart */
+                function removeItem(removeButton)
+                {
+                    /* Remove row from DOM and recalc cart total */
+                    var productRow = $(removeButton).parent().parent();
+                    productRow.slideUp(fadeTime, function () {
+                        productRow.remove();
+                        recalculateCart();
+                    });
+                }
+
+            });
+
+        </script>
+     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+        <style>
+            .menu1{
+                margin: 0;
+                padding: 0;
+                font-family: sans-serif;
+            }
+            nav{
+                width: 100%;
+                background:  #00316D;
+            }
+            ul{
+                width: 80%;
+                margin: 0 auto;
+                padding: 0;
+            }
+            ul li{
+                list-style: none;
+                display: inline-block;
+                padding-right: 30px;
+            }
+            ul li:hover{
+                background: #e91e63;
+            }
+            ul li a{
+                color: #fff;
+                text-decoration: none;
+            }
+            .toggle{
+                width: 100%;
+                padding: 10px 20px;
+                text-align: right;
+                background: #001f44;
+                box-sizing: border-box;
+                display: none;
+                color: #fff
+            }
+            @media (max-width: 768px)
+            {
+                .toggle{
+                    display: block;
+                }
+
+                ul{
+                    width: 100%;
+                    display:none;
+                }
+                ul li{
+                    display: block;
+                    text-align: center;
+                }
+                .active{
+                    display: block;
+                }
+                .mn{
+                    display: none !important;
+                }
+            }
+            a.al{
+                text-decoration: none;
+                color: white;
+            }
+            .dropdown:hover .m1{
+                display: block;
+            }
+            .m1 {
+                display: none;
+                position: absolute;
+                background-color: #f9f9f9;
+                min-width: 245px;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                z-index: 1;
+            }
+            .dropdown-item:hover{
+                background-color: #f1f1f1;
+            }
+            a{
+                text-decoration: none !important;  
+            }
+        </style>
+    </head>
+    <body>
+
+        <div class="container-fluid" style="background-color: #EBEBEB;"  > 
+            <div class="row register" style="background-color: #0B667D; ">
+
+                <div class="col-md-2 col-sm-2" style="color: white; font-size:200%; padding-top: 1em;">
+                    <h1><a href="index.html">OTO.com</a></h1>
+                </div>
+                <div class="col-md-10">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <div class=" row justify-content-md-center">
+                                <div class="col-md-auto" style="color: white;"><h3>Xin chào! OTO có thể giúp gì cho bạn?</h3></div>
+                            </div>
+                            <div>
+                                <form action="/action_page.php">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="name" placeholder="tiềm kiếm và thêm vào giỏ hàng" name="tiêu đề">
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="col-md-4" >
+
+                            <div class="qqq">
+                                <a class="navbar-brand" href="giohang1.html">
+                                    <i class="fa fa-shopping-cart" style="color: white; font-size: 36px;"></i>
+                                </a>
+                                <span class="ee">Giỏ hàng </span>
+
+
+                            </div>
+                            <div class="oto-header-banner dndk" id="topActionLiveUpBanner">
+                                <table class="table" style="font-size: 80%; color: white;">
+                                    <thead>
+                                        <tr>
+                                            <th><a href="dangnhap.html" class="text-dark">Đăng nhập</a></th>
+                                            <th><a href="dangky.html" class="text-dark">Đăng ký</a></th>
+                                        </tr>
+                                    </thead>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row menu1">
+            <nav>
+                <div class="toggle">
+                    <i class="fas fa-align-justify"></i>
+                </div>
+                <ul>
+                    <li class="dropdown"><i class="material-icons" style="color: white;">view_headline</i>&nbsp;<a href="#" class="text-white">Danh mục sản phẩm</a>
+                        <ul class="m1">
+                            <li><a class="dropdown-item" href="vanhoc.html">Văn học</a></li>
+                            <li><a class="dropdown-item" href="#">Thiếu nhi</a></li>
+                            <li><a class="dropdown-item" href="#">Kinh doanh</a></li>
+                            <li><a class="dropdown-item" href="#">Tác phẩm kinh điển</a></li>
+                            <li><a class="dropdown-item" href="#">Khoa học - Công nghệ</a></li>
+                            <li><a class="dropdown-item" href="#">Chăm sóc gia đình</a></li>
+                            <li><a class="dropdown-item" href="#">Truyện tranh</a></li>
+                            <li><a class="dropdown-item" href="#">Tác phẩm chọn lọc</a></li>
+                        </ul>
+                    </li>
+                    <li><i class="material-icons" style="color: white;">pan_tool</i>&nbsp;<a href="sachotobanchay.html" class="text-white">Sách oto bán chạy</a></li>
+                    <li><i class="material-icons" style="color: red;">whatshot</i>&nbsp;<a href="giamgia.html" class="text-white">deal hot trong ngày</a></li>
+                    <li><i class="material-icons" style="color: white;">assignment</i>&nbsp;<a href="checkout.html" class="text-white">kiểm tra đơn hàng</a></li>
+                    <li><i class="material-icons" style="color: white;">local_shipping</i>&nbsp;<a href="#" class="text-white">super ship?</a></li>
+                </ul>
+
+            </nav>
+            <script type="text/javascript">
+                $(document).ready(function () {
+                    $('.menu1').click(function () {
+                        $('ul').toggleClass('active');
+                    })
+                })
+            </script>
+        </div>
+                <div class="container-fluid menu-ab" style=" padding-block-end: 150px;">
+                    <div class="row ">
+                        <div class="col-md-2">
+
+                        </div>
+                        <div class="col-md-8 donhang">
+
+
+                            
+                            <h1>Đơn hàng</h1>
+
+                    <div class="shopping-cart">
+
+                        <div class="column-labels">
+                            <label class="product-image">Image</label>
+                            <label class="product-details">Product</label>
+                            <label class="product-price">Price</label>
+                            <label class="product-quantity">Quantity</label>
+                            <label class="product-removal">Remove</label>
+                            <label class="product-line-price">Total</label>
+                        </div>
+
+                        <div class="product">
+                            <div class="product-image">
+                                <img src="image/sachvanhoc/hay thay.jpg" style="width: 30%;">
+                            </div>
+                            <div class="product-details">
+                                <div class="product-title">Nhảy việc hay thay đổi chính mình</div>
+
+                            </div>
+                            <div class="product-price">139.000</div>
+                            <div class="product-quantity">
+                                <input type="number" value="2" min="1">
+                            </div>
+                            
+                            
+                            <div class="product-line-price">278.000</div>
+                        </div>
+
+                        <div class="product">
+                            <div class="product-image">
+                                <img src="image/sachvanhoc/branding 4.0.jpg" style="width: 30%;">
+                            </div>
+                            <div class="product-details">
+                                <div class="product-title">Branding 4.0</div>
+
+                            </div>
+                            <div class="product-price">189.000</div>
+                            <div class="product-quantity">
+                                <input type="number" value="1" min="1">
+                            </div>
+                            
+                            <div class="product-line-price">189.000</div>
+                        </div>
+
+                        <div class="totals">
+                            <div class="totals-item">
+                                <label>Subtotal</label>
+                                <div class="totals-value" id="cart-subtotal">467.000</div>
+                            </div>
+                            <div class="totals-item">
+                                <label>Tax (5%)</label>
+                                <div class="totals-value" id="cart-tax">23.350</div>
+                            </div>
+                            <div class="totals-item">
+                                <label>Shipping</label>
+                                <div class="totals-value" id="cart-shipping">15.000</div>
+                            </div>
+                            <div class="totals-item totals-item-total">
+                                <label>Grand Total</label>
+                                <div class="totals-value" id="cart-total">505.350</div>
+                            </div>
+                        </div>
+
+                                
+                                
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+
+                        </div>
+                    </div>
+                   
+                    
+                
+                       
+                        
+                      
+                            
+                        </div>
+                   <div class="row thanhtoan">
+                       
+                          <div class="container">
+                            <form action="/action_page.php">
+
+                              <div class="row">
+                                <div class="col-50">
+                                  <h3>Thông Tin Khách Hàng</h3>
+                                        <div class="row">
+                                            <div class="col-md-4"><h6>Họ và tên</h6></div>
+                                            <div class="col-md-8">
+                                                <input type="text" id="fname" name="firstname" placeholder="nguyễn khánh bảo trâm">
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-4"><h6>Điện thoại di động</h6></div>
+                                            <div class="col-md-8">
+                                                <input type="text" id="fname" name="firstname" placeholder="0329117596">
+                                            </div>
+                                        </div>
+                                                <div class="row">
+                                            <div class="col-md-4"><h6>Thành phố/tỉnh</h6></div>
+                                            <div class="col-md-8">
+                                                <input type="text" id="fname" name="firstname" placeholder="Đà nẵng">
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-4"><h6>quận/huyện</h6></div>
+                                            <div class="col-md-8">
+                                                <input type="text" id="fname" name="firstname" placeholder="Ngũ Hành Sớn">
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                          <div class="col-md-4"><h6>phường/xà</h6></div>
+                                          <div class="col-md-8">
+                                              <input type="text" id="fname" name="firstname" placeholder="phường Mỹ An">
+                                          </div>
+                                      </div>
+                                        <div class="row">
+                                            <div class="col-md-4"><h6>địa chỉ</h6></div>
+                                            <div class="col-md-8">
+                                                <input type="text" id="fname" name="firstname" placeholder="40 an thượng 8">
+                                                
+                                            </div>
+                                        </div>
+                                  <div class="row">
+                                      <div class="col-md-4"></div>
+                                      <div class="col-md-8">Đề nhận hàng dễ hàng hơn. OTO yêu cầu bạn chọn loại địa chỉ:
+                                          <div class="row">
+                                              <div class="col-50"><input type="radio" name="checkbox"  value="" id="in"/>&nbsp;&nbsp;Nhà riêng/chung cư</div>
+                                          <div class="col-50"><input type="radio" name="checkbox"  value="" id="in"/>&nbsp;&nbsp;Cơ quan/công ty</div>
+                                          </div>
+                                              
+                                      </div>
+                                      
+                                  </div>
+                                  
+                                  
+                                </div>
+
+                                <div class="col-50">
+                                  <h3>Thanh Toán</h3>
+                                  <label for="fname">Accepted Cards</label>
+                                  <div class="icon-container">
+                                    <i class="fa fa-cc-visa" style="color:navy;"></i>
+                                    <i class="fa fa-cc-amex" style="color:blue;"></i>
+                                    <i class="fa fa-cc-mastercard" style="color:red;"></i>
+                                    <i class="fa fa-cc-discover" style="color:orange;"></i>
+                                  </div>
+                                 
+                                  <label for="cname">Hình Thức Giao Hàng</label>
+                                    <div><input type="radio" name="checkbox" checked="checked" value=""/>&nbsp; Giao hàng tiêu chuẩn(dự kiến giao hàng thứ hai, không giao thứ 7 chử nhật<br><br></div>
+                               
+                                    <label for="ccnum">trả bằng xu của OTO</label>
+                                  <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
+                                  
+                                  <div>
+                                      <label for="expmonth">HÌNH THỨC THANH TOÁN</label>
+                                  
+                                      <div><input type="radio" name="checkbox"  value=""/>&nbsp; 1.Thanh Toán Bằng Tiền mặt<br><br></div>
+                                      <div><input type="radio" name="checkbox" value=""/> &nbsp; 2.Thanh Toán Bằng Thẻ Visa<br>
+                                          <div class="row">
+                                              <div class="col-md-6 ">
+                                                <div class="row sothe"><label >số thẻ</label>
+                                                 <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
+                                                </div>
+                                                <div class="row sothe"><label >Tên in thẻ</label>
+                                                 <input type="text" id="ccnum" name="cardnumber" placeholder="HO TRONG THANG">
+                                                </div>
+                                                 <div class="row">
+                                                     <div class="col-50">
+                                                       <label for="expyear">Ngày hết hạn</label>
+                                                       <input type="text" id="expyear" name="expyear" placeholder="2018">
+                                                     </div>
+                                                     <div class="col-50">
+                                                       <label for="cvv">Mã bảo mật</label>
+                                                       <input type="text" id="cvv" name="cvv" placeholder="352">
+                                                     </div>
+                                                 </div>
+                                              </div>
+                                              <div class="col-md-6">
+                                                  <img src="image/logo/the.png">
+                                              </div>
+            </div>
+                                      </div>
+                                      <div><input type="radio" name="checkbox" value=""/> &nbsp; 3.Thẻ ATM nội địa/Internet Banking
+                                      <div class="row">
+                                          <img src="image/logo/vietcombank.png">&nbsp;&nbsp;<img src="image/logo/viettinbank.png">&nbsp;&nbsp;
+                                          <img src="image/logo/viettinbank.png">&nbsp;&nbsp;<img src="image/logo/viettinbank.png">
+                                         
+                                          <img src="image/logo/vib.png">&nbsp;&nbsp;<img src="image/logo/viettinbank.png">
+                                      </div>
+                                  </div>
+                                 
+                                  
+                                </div>
+
+                              </div>
+                              <label>
+                                <input type="checkbox" checked="checked" name="sameadr"> Shipping address same as billing
+                              </label>
+                                  <button type="submit"  class="btn" style="background-color:pink;font-size: 150%;"><a href="camon.html">Thanh toán</a></button>
+                            </form>
+                          </div>
+                        </div>
+
+                        
+                    </div>
+                    </div>
+   
+                <div class="container-fluid menu-ab" style="background-color: #0b667b;">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="nnn"><h4>LIÊN HỆ VỚI OTO</h4></div>
+                            <a href="#" style="color: black;"><h6>Thứ 2 đến CN: 9h - 18h (Hotline), 7h - 22h (chat trực tuyến)</h6></a>
+                            <a href="#" style="color: black;"><h6>Trung tâm hỗ trợ</h6></a>
+                            <a href="#" style="color: black;"><h6>Hướng dẫn đặt hàng</h6></a>
+                            <a href="#" style="color: black;"><h6>Giao hàng và nhận hàng</h6></a>
+                            <a href="#" style="color: black;"><h6>Hướng dẫn đổi trả hàng</h6></a>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="nnn"><h4>OTO VIỆT NAM</h4></div>
+                            <div><a href="#" style="color: black;">Về Oto Việt Nam</a></div>
+                            <div><a href="#" style="color: black;">Bán hàng cùng Oto</a></div>
+                            <div><a href="#" style="color: black;">Tuyển dụng</a></div>
+                            <div><a href="#" style="color: black;">Điều khoản mua bán hàng hóa</a></div>
+                            <div><a href="#" style="color: black;">Chính sách bảo mật</a></div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="row">
+                                <div class="nnn"><h4>ĐĂNG KÝ NHẬN BẢN TIN TỪ OTO</h4></div>
+                            </div>
+                            <div class="row">
+                                <nav class="navbar justify-content-between" style="background-color: #0b667b;">
+
+                                    <form class="form-inline">
+                                        <input class="form-control mr-sm-2" type="search" placeholder="Your Email Address" aria-label="Search">
+                                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Đăng kí</button>
+                                    </form>
+                                </nav>'
+                            </div>
+                            <div>
+                                CÔNG TY TNHH RECESS
+                                Giấy CNĐKDN: 0308808576 – Ngày cấp: 06/5/2009, được sửa đổi lần thứ 15 ngày 24/7/2017.
+                                Cơ quan cấp: Phòng Đăng ký kinh doanh – Sở kế hoạch và Đầu tư TP.HCM
+                                Địa chỉ đăng ký kinh doanh: Tầng 19, Tòa nhà Saigon Centre – Tháp 2, 67 Lê Lợi, Phường Bến Nghé, Quận 1, Tp. Hồ Chí Minh, Việt Nam.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row bg-white">
+
+
+                        <div class="col-md-4 pb-3">
+                            CÔNG THỨC THANH TOáN
+                        </div>
+                        <div class="col-md-4">DỊCH VỤ GIAO HÀNG
+                        </div>
+                        <div class="col-md-4">CHỨNG NHẬN
+                        </div>
+                    </div>
+                    <div class="row bg-white">
+                        <div class="col-md-4">
+                            <img src="image/footer/visa.PNG">
+                            <img src="image/footer/visa2.PNG">
+                            <img src="image/footer/visa3.PNG">
+                            <img src="image/footer/visa4.PNG">
+                        </div>
+                        <div class="col-md-4">
+                            <div>
+                                <img src="image/footer/lelexpress.PNG">
+                                <img src="image/footer/lelexpress2.PNG">
+                            </div>
+                            <div><img src="image/footer/lelexpress3.PNG"></div>
+
+                        </div>
+                        <div class="col-md-4">
+                            <img src="image/footer/huyhieu.PNG">
+
+
+                        </div>
+                    </div>
+                    <div class="row bg-light" style="padding-top: 10px;">
+
+
+                        <div class="col-md-8 bg-light">
+                            <div>Liên hệ: 0989 467 439( Trâm)</div>
+                            <div>Địa chỉ: Phòng tin,32 Phan Đăng Lưu</div>
+                        </div>
+                        <div class="col-md-4" style="padding-left: 9em">
+                            <img src="image/footer/lienhe.PNG">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

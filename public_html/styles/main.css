@@ -1,0 +1,84 @@
+
+
+
+.nnn{
+    color: white;
+}
+.color{
+    color: black;
+}
+.bg{
+    background-color: #F793BB;
+}
+.ee{
+    color: white;
+    font-size: 150%;
+}
+.qqq{
+    margin-left: 5em;
+}
+
+#image_list li{
+    padding-right: 10px;
+    display: inline;
+}
+#image_list img{
+    width: 30px;
+    height: 50px;
+}
+.ttp{
+    font-size: 200%;
+}
+.gia{
+    color: red;
+    font-size: 150%;
+}
+#sumit{
+    padding: .5em 3em .5em 3em;
+    margin: 1em 5em 0 0;
+}
+.boder{
+    border-radius: 3px solid #EBEBEB;
+}
+.time{
+    padding: 1em 0 1em .5em;
+    border-bottom:1px dashed #EBEBEB;
+}
+.lienhe{
+    margin-top: 1em;
+    border: 4px solid #EBEBEB;
+}
+.place{
+    border-bottom:1px dashed #EBEBEB;
+}
+.bg{
+
+    background-color: white;
+}
+.gui{
+    float: right;
+    margin-top: 3em;
+}
+.pd{
+    margin-top: 1em;
+}
+.pd1{
+    padding-bottom: 1em;
+}
+.form-control{
+    padding-bottom: 2em;
+}
+.morecontent span {
+    display: none;
+}
+
+.morelink {
+    display: block;
+}
+.dndk{
+    margin: 0 2em 0 4em;
+    padding-bottom:0;
+}
+.gh{
+    margin-right: 1em;
+}

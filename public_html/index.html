@@ -1,0 +1,586 @@
+<html>
+    <head>
+        <title>OTO- Mang tri trức đến bên bạn</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
+        <link rel="stylesheet" href="styles/new.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ;" crossorigin="anonymous;">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <script src="bxSlider/jquery.bxslider.min.js"></script>
+        <script src="js/image_swap.js"></script>
+        <script src="bootstrap/bootstrap.min.js"></script>
+        <script src="bootstrap/popper.min.js"></script>
+        <link rel="stylesheet" href="bxSlider/jquery.bxslider.min.css">
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:400">
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,900">
+        
+
+        <script type="text/javascript">
+            $(document).ready(function () {
+
+                $('#itemslider').carousel({interval: 3000});
+
+                $('.carousel-showmanymoveone .item').each(function () {
+                    var itemToClone = $(this);
+
+                    for (var i = 1; i < 6; i++) {
+                        itemToClone = itemToClone.next();
+
+                        if (!itemToClone.length) {
+                            itemToClone = $(this).siblings(':first');
+                        }
+
+                        itemToClone.children(':first-child').clone()
+                                .addClass("cloneditem-" + (i))
+                                .appendTo($(this));
+                    }
+                });
+            });
+
+        </script>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="bxSlider/jquery.bxslider.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:400">
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,900">
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <script src="bxSlider/jquery.bxslider.min.js"></script>
+        <script src="js/image_swap.js"></script>
+        <script src="bootstrap/bootstrap.min.js"></script>
+        <script src="bootstrap/popper.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.15.0/jquery.validate.min.js"></script>
+        <script src="js/validate.js"></script>
+        <style>
+            .menu1{
+                margin: 0;
+                padding: 0;
+                font-family: sans-serif;
+            }
+            nav{
+                width: 100%;
+                background:  #00316D;
+            }
+            ul{
+                width: 80%;
+                margin: 0 auto;
+                padding: 0;
+            }
+            ul li{
+                list-style: none;
+                display: inline-block;
+                padding-right: 30px;
+            }
+            ul li:hover{
+                background: #e91e63;
+            }
+            ul li a{
+                color: #fff;
+                text-decoration: none;
+            }
+            .toggle{
+                width: 100%;
+                padding: 10px 20px;
+                text-align: right;
+                background: #001f44;
+                box-sizing: border-box;
+                display: none;
+                color: #fff
+            }
+            @media (max-width: 768px)
+            {
+                .toggle{
+                    display: block;
+                }
+
+                ul{
+                    width: 100%;
+                    display:none;
+                }
+                ul li{
+                    display: block;
+                    text-align: center;
+                }
+                .active{
+                    display: block;
+                }
+                .mn{
+                    display: none !important;
+                }
+            }
+            a.al{
+                text-decoration: none;
+                color: white;
+            }
+            .dropdown:hover .m1{
+                display: block;
+            }
+            .m1 {
+                display: none;
+                position: absolute;
+                background-color: #f9f9f9;
+                min-width: 245px;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                z-index: 1;
+            }
+            .dropdown-item:hover{
+                background-color: #f1f1f1;
+            }
+            a{
+              text-decoration: none !important;  
+            }
+        </style>
+    </head>
+    <body>
+
+        <div class="container-fluid" style="background-color: #EBEBEB;"  > 
+            <div class="row register" style="background-color: #0B667D; ">
+
+                <div class="col-md-2 col-sm-2" style="color: white; font-size:200%; padding-top: 1em;">
+                    <h1><a href="index.html">OTO.com</a></h1>
+                </div>
+                <div class="col-md-10">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <div class=" row justify-content-md-center">
+                                <div class="col-md-auto" style="color: white;"><h3>Xin chào! OTO có thể giúp gì cho bạn?</h3></div>
+                            </div>
+                            <div>
+                                <form action="/action_page.php">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="name" placeholder="tiềm kiếm và thêm vào giỏ hàng" name="tiêu đề">
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="col-md-4" >
+
+                            <div class="qqq">
+                                <a class="navbar-brand" href="giohang1.html">
+                                    <i class="fa fa-shopping-cart" style="color: white; font-size: 36px;"></i>
+                                </a>
+                                
+
+
+                            </div>
+                            <div class="oto-header-banner dndk" id="topActionLiveUpBanner">
+                                <table class="table" style="font-size: 80%; color: white;">
+                                    <thead>
+                                        <tr>
+                                            <th><a href="dangnhap.html" class="text-dark">Đăng nhập</a></th>
+                                            <th><a href="dangky.html" class="text-dark">Đăng ký</a></th>
+                                        </tr>
+                                    </thead>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+
+
+        <div class="row menu1">
+            <nav>
+                <div class="toggle">
+                    <i class="fas fa-align-justify"></i>
+                </div>
+                <ul>
+                    <li class="dropdown " ><i class="material-icons fas fa-align-justify" style="color:white;" >view_headline</i>&nbsp;Danh mục sản phẩm
+                        <ul class="m1">
+                            <li><a class="dropdown-item" href="vanhoc.html">Văn học</a></li>
+                            <li><a class="dropdown-item" href="#">Thiếu nhi</a></li>
+                            <li><a class="dropdown-item" href="#">Kinh doanh</a></li>
+                            <li><a class="dropdown-item" href="#">Tác phẩm kinh điển</a></li>
+                            <li><a class="dropdown-item" href="#">Khoa học - Công nghệ</a></li>
+                            <li><a class="dropdown-item" href="#">Chăm sóc gia đình</a></li>
+                            <li><a class="dropdown-item" href="#">Truyện tranh</a></li>
+                            <li><a class="dropdown-item" href="#">Tác phẩm chọn lọc</a></li>
+                        </ul>
+                    </li>
+                    <li><i class="material-icons" style="color: white;">pan_tool</i>&nbsp;<a href="sachotobanchay.html" class="text-white">Sách oto bán chạy</a></li>
+                    <li><i class="material-icons" style="color: red;">whatshot</i>&nbsp;<a href="giamgia.html" class="text-white">deal hot trong ngày</a></li>
+                    <li><i class="material-icons" style="color: white;">assignment</i>&nbsp;<a href="#" class="text-white">kiểm tra đơn hàng</a></li>
+                    <li><i class="material-icons" style="color: white;">local_shipping</i>&nbsp;<a href="#" class="text-white">super ship?</a></li>
+                </ul>
+
+            </nav>
+            <script type="text/javascript">
+                $(document).ready(function () {
+                    $('.menu1').click(function () {
+                        $('ul').toggleClass('active');
+                    })
+                })
+            </script>
+        </div>
+
+
+        <div>.</div>
+
+        <div class="row bg-white" id="men" >
+           <div  class="col-md-2">
+               <div class="vertical-menu hoho">
+                    <a href="#" class="active">NHÀ SÁCH OTO</a>
+                    <a href="#">Ebooks</a>
+                    <a href="#">Sách kinh tế</a>
+                    <a href="#">Sách selfhelp</a>
+                    <a href="vanhoc.html">Sách văn học</a>
+                    <a href="#">Sách lịch sử</a>
+                    <a href="#">Sách công nghệ thong </a>
+                    <a href="#">Sách kiến thức tổng hợp</a>
+                    <a href="#">Sách Nguyễn nhật Asnh</a>
+                    <a href="#">Truyện tranh, comic</a>
+                    <a href="#">Truyện ngôn tình</a>
+                    
+                 </div>			
+           </div>
+        
+            <div class="col-md-10" >        	
+                <div id="demo" class="carousel " data-ride="carousel">
+
+                    <!-- Indicators -->
+                    <ul class="carousel-indicators">
+                        <li data-target="#demo" data-slide-to="0" class="active"></li>
+                        <li data-target="#demo" data-slide-to="1"></li>
+                        <li data-target="#demo" data-slide-to="2"></li>
+                    </ul>
+
+                    <!-- The slideshow -->
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="image/logo/banner5.jpg" alt="Los Angeles" width="1100" height="200">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="image/logo/banner3.jpg" alt="Chicago" width="1100" height="200">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="image/logo/banner2.jpg" alt="New York" width="1100" height="200">
+                        </div>
+                    </div>
+
+                    <!-- Left and right controls -->
+                    <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </a>
+                    <a class="carousel-control-next" href="#demo" data-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="row" style="background-color: #EBEBEB;">Nhà sách Oto</div>
+<div class="row" style="background-color: white;">
+				<div class="container">
+					<div class="row bg-white">.</div>
+					<div class="row">
+						<div class="col-md-10"><h6>SÁCH MỚI NHẤT OTO</h6></div>
+						<div class="col-md-2"><h6>Xem Thêm</h6></div>
+					</div>
+					<div class="row">
+						<div class="col-md-3">
+							<div class="card sp hover-shadow cursor">
+							  <img class="card-img-top" src="image/sachmoinhat/sachmoinhat4.jpg" alt="Card image cap">
+							  <span class="card-body">
+								<h5 class="card-title">Dám bị ghét</h5>
+								<p class="card-text">Gía: 65000 vnđ</p>
+								<br>
+                                                                <a href="giohang1.html" class="btn btn-primary">đặt hàng</a>
+							  </span>
+							</div>
+						</div>
+						<div class="col-md-3">
+							<div class="card sp hover-shadow cursor " >
+							  <img class="card-img-top" src="image/sachmoinhat/sachmoinhat1.jpg" alt="Card image cap">
+							  <span class="card-body">
+								<h5 class="card-title">Bình tính khi Ế mạnh mẽ khi yêu</h5>
+								<p class="card-text">Gía: 63000 vnđ</p>
+								<a href="#" class="btn btn-primary">đặt hàng</a>
+							  </span>
+							</div>
+						</div>
+						<div class="col-md-3">
+							<div class="card sp hover-shadow cursor" >
+							  <img class="card-img-top" src="image/sachmoinhat/sachmoinhat2.jpg" alt="Card image cap">
+							  <span class="card-body">
+								<h5 class="card-title">30 đề thi chính thức THPT </h5>
+								<p class="card-text">Gía: 123000 vnđ</p>
+								<a href="#" class="btn btn-primary">đặt hàng</a>
+							  </span>
+							</div>
+						</div>
+						<div class="col-md-3">
+							<div class="card sp hover-shadow cursor" >
+							  <img class="card-img-top" src="image/sachmoinhat/sachmoinhat3.jpg" alt="Card image cap">
+							  <span class="card-body">
+								<h5 class="card-title">Khi bạn đang mơ thì người khác...</h5>
+								<p class="card-text">Gía: 73000 vnđ</p>
+								<a href="#" class="btn btn-primary">đặt hàng</a>
+							  </span>
+							</div>
+						</div>
+					</div>
+					<div class="row" style="background-color: #EBEBEB;">Nhà sách Oto</div>
+					<div class="row bg-white">.</div>
+					<div class="row">
+						<div class="col-md-10"><h6>ĐỌC NHIỀU NHẤT OTO</h6></div>
+						<div class="col-md-2"><h6>Xem Thêm</h6></div>
+					</div>
+					<div class="row">
+						<div class="col-md-3">
+							<div class="card sp hover-shadow cursor" >
+							  <img class="card-img-top" src="image/sachdocnhieunhat/sachdocnhieunhat3.jpg" alt="Card image cap">
+							  <span class="card-body">
+								<h5 class="card-title">Cách bài trí của người nhật</h5>
+								<p class="card-text">Gía: 62000 vnđ</p>
+								<a href="#" class="btn btn-primary">đặt hàng</a>
+							  </span>
+							</div>
+						</div>
+						<div class="col-md-3">
+							<div class="card sp hover-shadow cursor" >
+							  <img class="card-img-top" src="image/sachdocnhieunhat/sachdocnhieunhat6.jpg" alt="Card image cap">
+							  <span class="card-body">
+								<h5 class="card-title">Trên đường băng</h5>
+								<p class="card-text">Gía: 70000 vnđ</p>
+								<br>
+								<a href="#" class="btn btn-primary">đặt hàng</a>
+							  </span>
+							</div>
+						</div>
+						<div class="col-md-3">
+							<div class="card sp hover-shadow cursor" >
+							  <img class="card-img-top" src="image/sachdocnhieunhat/sachdocnhieunhat8.jpg" alt="Card image cap">
+							  <span class="card-body">
+								<h5 class="card-title">Những bài học không có nơi giảng đường</h5>
+								<p class="card-text">Gía: 96000 vnđ</p>
+								<a href="#" class="btn btn-primary">đặt hàng</a>
+							  </span>
+							</div>
+						</div>
+						<div class="col-md-3">
+							<div class="card sp hover-shadow cursor" >
+							  <img class="card-img-top" src="image/sachdocnhieunhat/sachdocnhieunhat11.jpg" alt="Card image cap">
+							  <span class="card-body">
+								<h5 class="card-title">Tiếp thị 4.0</h5>
+								<p class="card-text">Gía: 120000 vnđ</p>
+								<br>
+								<a href="#" class="btn btn-primary">đặt hàng</a>
+							  </span>
+							</div>
+						</div>
+					</div>
+					<div class="row" style="background-color: #EBEBEB;">Nhà sách Oto</div>
+					<div class="row bg-white">.</div>
+					<div class="row">
+						<div class="col-md-10"><h6>BÁN CHẠY NHẤT OTO</h6></div>
+						<div class="col-md-2"><h6>Xem Thêm</h6></div>
+					</div>
+					<div class="row">
+						<div class="col-md-3">
+							<div class="card sp hover-shadow cursor" >
+							  <img class="card-img-top" src="image/banchaynhatoto/sachotobanchay1.jpg" alt="Card image cap">
+							  <span class="card-body">
+								<h5 class="card-title">Giết con chim nhạy</h5>
+								<p class="card-text">Gía: 75000 vnđ</p>
+								<br>
+								<a href="#" class="btn btn-primary">đặt hàng</a>
+							  </span>
+							</div>
+						</div>
+						<div class="col-md-3">
+							<div class="card sp hover-shadow cursor" >
+							  <img class="card-img-top" src="image/banchaynhatoto/sachotobanchay12.jpg" alt="Card image cap">
+							  <span class="card-body">
+								<h5 class="card-title">Người nam châm</h5>
+								<p class="card-text">Gía: 116000 vnđ</p>
+								<br>
+								<a href="#" class="btn btn-primary">đặt hàng</a>
+							  </span>
+							</div>
+						</div>
+						<div class="col-md-3">
+							<div class="card sp hover-shadow cursor" >
+							  <img class="card-img-top" src="image/banchaynhatoto/sachotobanchay11.jpg" alt="Card image cap">
+							  <span class="card-body">
+								<h5 class="card-title">Phi lý trí</h5>
+								<p class="card-text">Gía: 96000 vnđ</p>
+								<br>
+								<a href="#" class="btn btn-primary">đặt hàng</a>
+							  </span>
+							</div>
+						</div>
+						<div class="col-md-3">
+							<div class="card sp hover-shadow cursor" >
+							  <img class="card-img-top" src="image/banchaynhatoto/sachotobanchay9.jpg" alt="Card image cap">
+							  <span class="card-body">
+								<h5 class="card-title">Chuyện con mèo dạy hải âu bay</h5>
+								<p class="card-text">Gía: 65000 vnđ</p>
+								<a href="#" class="btn btn-primary">đặt hàng</a>
+							  </span>
+							</div>
+						</div>
+					</div>
+					<div class="row" style="background-color: #EBEBEB;">Nhà sách Oto</div>
+					<div class="row bg-white">.</div>
+					<div class="row">
+						<div class="col-md-10"><h6>SÁCH OTO KHUYÊN ĐỌC</h6></div>
+						<div class="col-md-2"><h6>Xem Thêm</h6></div>
+					</div>
+					<div class="row">
+						<div class="col-md-3">
+							<div class="card sp hover-shadow cursor" >
+							  <img class="card-img-top lala" src="image/sachotokhuyendoc/sachotokhuyendoc1.jpg" alt="Card image cap">
+							  <span class="card-body">
+								<h5 class="card-title">Nghệ thuật của việc Đếch quan tâm</h5>
+								<p class="card-text">Gía: 71000 vnđ</p>
+								<a href="#" class="btn btn-primary">đặt hàng</a>
+							  </span>
+							</div>
+						</div>
+						<div class="col-md-3">
+							<div class="card sp hover-shadow cursor" >
+							  <img class="card-img-top lala" src="image/sachotokhuyendoc/sachotokhuyendoc2.jpg" alt="Card image cap">
+							  <span class="card-body">
+								<h5 class="card-title">Khí chất bao nhiêu Hạnh phúc bấy nhiêu</h5>
+								<p class="card-text">Gía: 68000 vnđ</p>
+								<a href="#" class="btn btn-primary">đặt hàng</a>
+							  </span>
+							</div>
+						</div>
+						<div class="col-md-3">
+							<div class="card sp hover-shadow cursor" >
+							  <img class="card-img-top" src="image/sachotokhuyendoc/sachotokhuyendoc11.jpg" alt="Card image cap">
+							  <span class="card-body">
+								<h5 class="card-title">Ba người thầy vĩ đại</h5>
+								<p class="card-text">Gía: 85000 vnđ</p>
+								<br>
+								<a href="#" class="btn btn-primary">đặt hàng</a>
+							  </span>
+							</div>
+						</div>
+						<div class="col-md-3">
+							<div class="card sp hover-shadow cursor ">
+							  <img class="card-img-top" src="image/sachotokhuyendoc/sachotokhuyendoc4.jpg" alt="Card image cap">
+							  <span class="card-body">
+								<h5 class="card-title">Khi hơi thở hóa tinh không</h5>
+								<p class="card-text">Gía: 140000 vnđ</p>
+								<a href="#" class="btn btn-primary">đặt hàng</a>
+							  </span>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+        
+        <div class="row cadao">
+            <h1>Ca dao tục ngữ về sách từ OTO</h1>
+        </div>
+        <div class="row conn">
+            <img src="image/logo/anhsach7.png" alt="Avatar" class="image1" >
+            <div class="overlay">
+                <div class="text"><a href="#" id="k">CÙNG OTO KHÁM PHÁ NHÉ !<br> ^^</a></div>
+            </div>
+        </div>
+
+        <div class="row" style="background: #EBEBEB;">.</div>
+        <div class="row" style="background-color: #0b667b;">
+            <div class="col-md-3">
+                <div class="nnn"><h4>LIÊN HỆ VỚI OTO</h4></div>
+                <a href="#" style="color: black;"><h6>Thứ 2 đến CN: 9h - 18h (Hotline), 7h - 22h (chat trực tuyến)</h6></a>
+                <a href="#" style="color: black;"><h6>Trung tâm hỗ trợ</h6></a>
+                <a href="#" style="color: black;"><h6>Hướng dẫn đặt hàng</h6></a>
+                <a href="#" style="color: black;"><h6>Giao hàng và nhận hàng</h6></a>
+                <a href="#" style="color: black;"><h6>Hướng dẫn đổi trả hàng</h6></a>
+            </div>
+            <div class="col-md-3">
+                <div class="nnn"><h4>OTO VIỆT NAM</h4></div>
+                <div><a href="#" style="color: black;">Về Oto Việt Nam</a></div>
+                <div><a href="#" style="color: black;">Bán hàng cùng Oto</a></div>
+                <div><a href="#" style="color: black;">Tuyển dụng</a></div>
+                <div><a href="#" style="color: black;">Điều khoản mua bán hàng hóa</a></div>
+                <div><a href="#" style="color: black;">Chính sách bảo mật</a></div>
+            </div>
+            <div class="col-md-6">
+                <div class="row">
+                    <div class="nnn"><h4>ĐĂNG KÝ NHẬN BẢN TIN TỪ OTO</h4></div>
+                </div>
+                <div class="row">
+                    <nav class="navbar   justify-content-between" style="background-color:#0b667b;" >
+
+                        <form class="form-inline">
+                            <input class="form-control mr-sm-2" type="search" placeholder="Your Email Address" aria-label="Search">
+                            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Đăng kí</button>
+                        </form>
+                    </nav>'
+                </div>
+                <div>
+                    CÔNG TY TNHH RECESS
+                    Giấy CNĐKDN: 0308808576 – Ngày cấp: 06/5/2009, được sửa đổi lần thứ 15 ngày 24/7/2017.
+                    Cơ quan cấp: Phòng Đăng ký kinh doanh – Sở kế hoạch và Đầu tư TP.HCM
+                    Địa chỉ đăng ký kinh doanh: Tầng 19, Tòa nhà Saigon Centre – Tháp 2, 67 Lê Lợi, Phường Bến Nghé, Quận 1, Tp. Hồ Chí Minh, Việt Nam.
+                </div>
+            </div>
+        </div>
+        <div class="row bg-white">
+
+
+            <div class="col-md-4 pb-3">
+                CÔNG THỨC THANH TOáN
+            </div>
+            <div class="col-md-4">DỊCH VỤ GIAO HÀNG
+            </div>
+            <div class="col-md-4">CHỨNG NHẬN
+            </div>
+        </div>
+        <div class="row bg-white">
+            <div class="col-md-4">
+                <img src="image/footer/visa.PNG">
+                <img src="image/footer/visa2.PNG">
+                <img src="image/footer/visa3.PNG">
+                <img src="image/footer/visa4.PNG">
+            </div>
+            <div class="col-md-4">
+                <div>
+                    <img src="image/footer/lelexpress.PNG">
+                    <img src="image/footer/lelexpress2.PNG">
+                </div>
+                <div><img src="image/footer/lelexpress3.PNG"></div>
+
+            </div>
+            <div class="col-md-4">
+                <img src="image/footer/huyhieu.PNG">
+
+
+            </div>
+        </div>
+        <div class="row bg-white" style="padding-top: 1em;">
+
+
+            <div class="col-md-8 bg-light">
+                <div>Liên hệ: 0989 467 439( Trâm)</div>
+                <div>Địa chỉ: Phòng tin,32 Phan Đăng Lưu</div>
+            </div>
+            <div class="col-md-4" style="padding-left: 9em">
+                <img src="image/footer/lienhe.PNG">
+            </div>
+        </div>
+    
+        </div>
+
+
+</body>
+</html>
